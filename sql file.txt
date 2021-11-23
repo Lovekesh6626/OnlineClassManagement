@@ -1,0 +1,158 @@
+  
+
+  -- Roles table 
+
+  Create table Roles(
+  Id int IDENTITY(1,1)  primary key  ,
+  Role varchar (20) NOT NULL
+  )
+
+  
+-- Account table
+  create table Account(
+  Id int IDENTITY(100,1) primary  key not null,
+  FullName varchar (20) not null,
+  Email varchar(20) unique not null,
+  Password varchar (20) not null,
+  Role int foreign key references  Roles(Id)
+  )
+
+
+
+  -- Log 
+
+
+  Create Table LoginAccess(
+  
+  Id int IDENTITY(99,1)primary key,
+  Emailid varchar(20),
+  password varchar(20),
+  Logintime datetime default current_timestamp
+  
+  );
+
+
+
+
+  -- Student Profile 
+
+  CREATE TABLE StudentProfile(
+  Id int foreign key  references Account(Id),
+  PhoneNumber bigint primary key, 
+  ImageUrl varchar(50),
+  About text
+  )
+
+
+  -- social Media 
+
+  create table SocialMedia(
+  Id int foreign key  references Account(Id),
+ Type varchar(30),
+ socialmediaurl varchar(50)
+  )
+
+
+   -- Instructor Profile
+
+  create table InstructorProfile (
+  InstructorId  int foreign key references  Account(Id),
+  InstructorPhoneNumber bigint ,
+  InstructorAddress  Text,
+  InstructorAbout text,
+  Time datetime default current_timestamp
+  )
+
+     -- Category 
+
+    create table Category(
+	Id int  primary key identity(1,1),
+	Name varchar (30),
+	IconUrl varchar (50)
+	)
+                                                                                                                                                                                                                                                                                                         
+
+
+   -- Create Course 
+
+  create table CreateCourse(
+  InstructorId int foreign key references Account(Id), 
+  CourseId int primary key  identity(1,1),
+  CourseLevel varchar (50),
+  Details text,
+  Provider varchar (20),
+  Tage varchar(30),
+  Leanguage varchar (30),
+  MetaTitle varchar (20),
+  MetaDescription varchar (30),
+  Category int  foreign key references Category(Id)
+  
+  )
+
+
+  create table coursecontent(
+  content_id int foreign key  references CreateCourse(CourseId),
+   CourseThumbnail varchar(50),
+ ImagesUrl varchar(50));
+   -- Content 
+
+   create table Content(
+   CourseID int foreign key  references CreateCourse  (CourseId) ,
+   ContentId int,
+   ContentType varchar (30),
+   Url varchar (50)
+   )
+    
+
+	-- Student 
+
+	 create table StudentCart(
+	 StudentId int foreign key references Account (Id),
+	  CourseID int foreign key references CreateCourse(CourseId),
+	 Time datetime default current_timestamp
+	 )
+
+
+	  --Message 
+
+	  create table Message(
+	  StudentId int foreign key  references Account (Id),
+	  InstructorID int foreign key  references Account (Id),
+	  Chat text
+	  )
+
+	 
+
+	alter table StudentProfile
+	alter column PhoneNumber int not null  
+
+alter table StudentProfile
+ADD primary k
+
+
+
+ alter table Message
+ADD sno int not null ;
+
+
+alter table InstructorProfile
+alter column InstructorPhoneNumber bigint not null;
+
+alter table Message
+Add primary key (sno);
+
+alter table StudentCart
+Add  sno int not null ;
+
+
+
+
+  alter table StudentCart
+  Add primary key (sno) ;
+
+
+  alter table Content
+  alter column ContentId int not null;
+  alter table Coursecontent
+  add primary key (imagesurl);
+  
