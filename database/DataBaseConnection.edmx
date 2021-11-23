@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="learnwithniteshsirModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Role" Type="int" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" />
+          <Property Name="IconUrl" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'learnwithniteshsir.dbo.Content' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentId" />
+          </Key>
+          <Property Name="CourseID" Type="int" />
+          <Property Name="ContentId" Type="int" Nullable="false" />
+          <Property Name="ContentType" Type="varchar" MaxLength="30" />
+          <Property Name="Url" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="coursecontent">
+          <Key>
+            <PropertyRef Name="ImagesUrl" />
+          </Key>
+          <Property Name="content_id" Type="int" />
+          <Property Name="CourseThumbnail" Type="varchar" MaxLength="50" />
+          <Property Name="ImagesUrl" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CreateCourse">
+          <Key>
+            <PropertyRef Name="CourseId" />
+          </Key>
+          <Property Name="InstructorId" Type="int" />
+          <Property Name="CourseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseLevel" Type="varchar" MaxLength="50" />
+          <Property Name="Details" Type="text" />
+          <Property Name="Provider" Type="varchar" MaxLength="20" />
+          <Property Name="Tage" Type="varchar" MaxLength="30" />
+          <Property Name="Leanguage" Type="varchar" MaxLength="30" />
+          <Property Name="MetaTitle" Type="varchar" MaxLength="20" />
+          <Property Name="MetaDescription" Type="varchar" MaxLength="30" />
+          <Property Name="Category" Type="int" />
+        </EntityType>
+        <EntityType Name="InstructorProfile">
+          <Key>
+            <PropertyRef Name="InstructorPhoneNumber" />
+          </Key>
+          <Property Name="InstructorId" Type="int" />
+          <Property Name="InstructorPhoneNumber" Type="bigint" Nullable="false" />
+          <Property Name="InstructorAddress" Type="text" />
+          <Property Name="InstructorAbout" Type="text" />
+          <Property Name="Time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LoginAccess">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Emailid" Type="varchar" MaxLength="20" />
+          <Property Name="password" Type="varchar" MaxLength="20" />
+          <Property Name="Logintime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="StudentId" Type="int" />
+          <Property Name="InstructorID" Type="int" />
+          <Property Name="Chat" Type="text" />
+          <Property Name="sno" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="Id" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="socialmediaurl" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentCart">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="StudentId" Type="int" />
+          <Property Name="CourseID" Type="int" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="sno" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentProfile">
+          <Key>
+            <PropertyRef Name="PhoneNumber" />
+          </Key>
+          <Property Name="Id" Type="int" />
+          <Property Name="PhoneNumber" Type="int" Nullable="false" />
+          <Property Name="ImageUrl" Type="varchar" MaxLength="50" />
+          <Property Name="About" Type="text" />
+        </EntityType>
+        <Association Name="FK__Account__Role__2B3F6F97">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Content__CourseI__3E52440B">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="Content" Type="Self.Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coursecon__conte__3C69FB99">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="coursecontent" Type="Self.coursecontent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="coursecontent">
+              <PropertyRef Name="content_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CreateCou__Categ__3A81B327">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateCourse">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CreateCou__Instr__398D8EEE">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateCourse">
+              <PropertyRef Name="InstructorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__Instr__33D4B598">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="InstructorProfile" Type="Self.InstructorProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InstructorProfile">
+              <PropertyRef Name="InstructorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Message__Instruc__44FF419A">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Message" Type="Self.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="InstructorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Message__Student__440B1D61">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Message" Type="Self.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SocialMedia__Id__31EC6D26">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="SocialMedia" Type="Self.SocialMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SocialMedia">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCa__Cours__412EB0B6">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="StudentCart" Type="Self.StudentCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="StudentCart">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCa__Stude__403A8C7D">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="StudentCart" Type="Self.StudentCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentCart">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentProfi__Id__300424B4">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="StudentProfile" Type="Self.StudentProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentProfile">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="learnwithniteshsirModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="coursecontent" EntityType="Self.coursecontent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CreateCourse" EntityType="Self.CreateCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InstructorProfile" EntityType="Self.InstructorProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginAccess" EntityType="Self.LoginAccess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentCart" EntityType="Self.StudentCart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentProfile" EntityType="Self.StudentProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Content" EntityType="Self.Content" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Content].[CourseID] AS [CourseID], 
+    [Content].[ContentId] AS [ContentId], 
+    [Content].[ContentType] AS [ContentType], 
+    [Content].[Url] AS [Url]
+    FROM [dbo].[Content] AS [Content]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Account__Role__2B3F6F97" Association="Self.FK__Account__Role__2B3F6F97">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Content__CourseI__3E52440B" Association="Self.FK__Content__CourseI__3E52440B">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="Content" EntitySet="Content" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coursecon__conte__3C69FB99" Association="Self.FK__coursecon__conte__3C69FB99">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="coursecontent" EntitySet="coursecontent" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CreateCou__Categ__3A81B327" Association="Self.FK__CreateCou__Categ__3A81B327">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CreateCou__Instr__398D8EEE" Association="Self.FK__CreateCou__Instr__398D8EEE">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__Instr__33D4B598" Association="Self.FK__Instructo__Instr__33D4B598">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="InstructorProfile" EntitySet="InstructorProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Message__Instruc__44FF419A" Association="Self.FK__Message__Instruc__44FF419A">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Message__Student__440B1D61" Association="Self.FK__Message__Student__440B1D61">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SocialMedia__Id__31EC6D26" Association="Self.FK__SocialMedia__Id__31EC6D26">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="SocialMedia" EntitySet="SocialMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCa__Cours__412EB0B6" Association="Self.FK__StudentCa__Cours__412EB0B6">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="StudentCart" EntitySet="StudentCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCa__Stude__403A8C7D" Association="Self.FK__StudentCa__Stude__403A8C7D">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="StudentCart" EntitySet="StudentCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentProfi__Id__300424B4" Association="Self.FK__StudentProfi__Id__300424B4">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="StudentProfile" EntitySet="StudentProfile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="learnwithniteshsirModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Role" Type="Int32" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK__Account__Role__2B3F6F97" FromRole="Account" ToRole="Roles" />
+          <NavigationProperty Name="CreateCourse" Relationship="Self.FK__CreateCou__Instr__398D8EEE" FromRole="Account" ToRole="CreateCourse" />
+          <NavigationProperty Name="InstructorProfile" Relationship="Self.FK__Instructo__Instr__33D4B598" FromRole="Account" ToRole="InstructorProfile" />
+          <NavigationProperty Name="Message" Relationship="Self.FK__Message__Instruc__44FF419A" FromRole="Account" ToRole="Message" />
+          <NavigationProperty Name="Message1" Relationship="Self.FK__Message__Student__440B1D61" FromRole="Account" ToRole="Message" />
+          <NavigationProperty Name="SocialMedia" Relationship="Self.FK__SocialMedia__Id__31EC6D26" FromRole="Account" ToRole="SocialMedia" />
+          <NavigationProperty Name="StudentCart" Relationship="Self.FK__StudentCa__Stude__403A8C7D" FromRole="Account" ToRole="StudentCart" />
+          <NavigationProperty Name="StudentProfile" Relationship="Self.FK__StudentProfi__Id__300424B4" FromRole="Account" ToRole="StudentProfile" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IconUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CreateCourse" Relationship="Self.FK__CreateCou__Categ__3A81B327" FromRole="Category" ToRole="CreateCourse" />
+        </EntityType>
+        <EntityType Name="coursecontent">
+          <Key>
+            <PropertyRef Name="ImagesUrl" />
+          </Key>
+          <Property Name="content_id" Type="Int32" />
+          <Property Name="CourseThumbnail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImagesUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CreateCourse" Relationship="Self.FK__coursecon__conte__3C69FB99" FromRole="coursecontent" ToRole="CreateCourse" />
+        </EntityType>
+        <EntityType Name="CreateCourse">
+          <Key>
+            <PropertyRef Name="CourseId" />
+          </Key>
+          <Property Name="InstructorId" Type="Int32" />
+          <Property Name="CourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Provider" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Leanguage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MetaTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MetaDescription" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="Int32" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__CreateCou__Instr__398D8EEE" FromRole="CreateCourse" ToRole="Account" />
+          <NavigationProperty Name="Category1" Relationship="Self.FK__CreateCou__Categ__3A81B327" FromRole="CreateCourse" ToRole="Category" />
+          <NavigationProperty Name="coursecontent" Relationship="Self.FK__coursecon__conte__3C69FB99" FromRole="CreateCourse" ToRole="coursecontent" />
+          <NavigationProperty Name="Content" Relationship="Self.FK__Content__CourseI__3E52440B" FromRole="CreateCourse" ToRole="Content" />
+          <NavigationProperty Name="StudentCart" Relationship="Self.FK__StudentCa__Cours__412EB0B6" FromRole="CreateCourse" ToRole="StudentCart" />
+        </EntityType>
+        <EntityType Name="InstructorProfile">
+          <Key>
+            <PropertyRef Name="InstructorPhoneNumber" />
+          </Key>
+          <Property Name="InstructorId" Type="Int32" />
+          <Property Name="InstructorPhoneNumber" Type="Int64" Nullable="false" />
+          <Property Name="InstructorAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="InstructorAbout" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Instructo__Instr__33D4B598" FromRole="InstructorProfile" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="LoginAccess">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emailid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Logintime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="InstructorID" Type="Int32" />
+          <Property Name="Chat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sno" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Message__Instruc__44FF419A" FromRole="Message" ToRole="Account" />
+          <NavigationProperty Name="Account1" Relationship="Self.FK__Message__Student__440B1D61" FromRole="Message" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__Role__2B3F6F97" FromRole="Roles" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="Type" />
+          </Key>
+          <Property Name="Id" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="socialmediaurl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__SocialMedia__Id__31EC6D26" FromRole="SocialMedia" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="StudentCart">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="CourseID" Type="Int32" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="sno" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__StudentCa__Stude__403A8C7D" FromRole="StudentCart" ToRole="Account" />
+          <NavigationProperty Name="CreateCourse" Relationship="Self.FK__StudentCa__Cours__412EB0B6" FromRole="StudentCart" ToRole="CreateCourse" />
+        </EntityType>
+        <EntityType Name="StudentProfile">
+          <Key>
+            <PropertyRef Name="PhoneNumber" />
+          </Key>
+          <Property Name="Id" Type="Int32" />
+          <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
+          <Property Name="ImageUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="About" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__StudentProfi__Id__300424B4" FromRole="StudentProfile" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentId" />
+          </Key>
+          <Property Name="CourseID" Type="Int32" />
+          <Property Name="ContentId" Type="Int32" Nullable="false" />
+          <Property Name="ContentType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CreateCourse" Relationship="Self.FK__Content__CourseI__3E52440B" FromRole="Content" ToRole="CreateCourse" />
+        </EntityType>
+        <Association Name="FK__Account__Role__2B3F6F97">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="Role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CreateCou__Instr__398D8EEE">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateCourse">
+              <PropertyRef Name="InstructorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__Instr__33D4B598">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="InstructorProfile" Type="Self.InstructorProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InstructorProfile">
+              <PropertyRef Name="InstructorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Message__Instruc__44FF419A">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Message" Type="Self.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="InstructorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Message__Student__440B1D61">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Message" Type="Self.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SocialMedia__Id__31EC6D26">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="SocialMedia" Type="Self.SocialMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SocialMedia">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCa__Stude__403A8C7D">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="StudentCart" Type="Self.StudentCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentCart">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentProfi__Id__300424B4">
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="StudentProfile" Type="Self.StudentProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentProfile">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CreateCou__Categ__3A81B327">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CreateCourse">
+              <PropertyRef Name="Category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coursecon__conte__3C69FB99">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="coursecontent" Type="Self.coursecontent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="coursecontent">
+              <PropertyRef Name="content_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Content__CourseI__3E52440B">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="Content" Type="Self.Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCa__Cours__412EB0B6">
+          <End Role="CreateCourse" Type="Self.CreateCourse" Multiplicity="0..1" />
+          <End Role="StudentCart" Type="Self.StudentCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CreateCourse">
+              <PropertyRef Name="CourseId" />
+            </Principal>
+            <Dependent Role="StudentCart">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="learnwithniteshsirEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Account" EntityType="Self.Account" />
+          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="coursecontent" EntityType="Self.coursecontent" />
+          <EntitySet Name="CreateCourse" EntityType="Self.CreateCourse" />
+          <EntitySet Name="InstructorProfile" EntityType="Self.InstructorProfile" />
+          <EntitySet Name="LoginAccess" EntityType="Self.LoginAccess" />
+          <EntitySet Name="Message" EntityType="Self.Message" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" />
+          <EntitySet Name="StudentCart" EntityType="Self.StudentCart" />
+          <EntitySet Name="StudentProfile" EntityType="Self.StudentProfile" />
+          <EntitySet Name="Content" EntityType="Self.Content" />
+          <AssociationSet Name="FK__Account__Role__2B3F6F97" Association="Self.FK__Account__Role__2B3F6F97">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CreateCou__Instr__398D8EEE" Association="Self.FK__CreateCou__Instr__398D8EEE">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__Instr__33D4B598" Association="Self.FK__Instructo__Instr__33D4B598">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="InstructorProfile" EntitySet="InstructorProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Message__Instruc__44FF419A" Association="Self.FK__Message__Instruc__44FF419A">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Message__Student__440B1D61" Association="Self.FK__Message__Student__440B1D61">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SocialMedia__Id__31EC6D26" Association="Self.FK__SocialMedia__Id__31EC6D26">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="SocialMedia" EntitySet="SocialMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCa__Stude__403A8C7D" Association="Self.FK__StudentCa__Stude__403A8C7D">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="StudentCart" EntitySet="StudentCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentProfi__Id__300424B4" Association="Self.FK__StudentProfi__Id__300424B4">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="StudentProfile" EntitySet="StudentProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CreateCou__Categ__3A81B327" Association="Self.FK__CreateCou__Categ__3A81B327">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coursecon__conte__3C69FB99" Association="Self.FK__coursecon__conte__3C69FB99">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="coursecontent" EntitySet="coursecontent" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Content__CourseI__3E52440B" Association="Self.FK__Content__CourseI__3E52440B">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="Content" EntitySet="Content" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCa__Cours__412EB0B6" Association="Self.FK__StudentCa__Cours__412EB0B6">
+            <End Role="CreateCourse" EntitySet="CreateCourse" />
+            <End Role="StudentCart" EntitySet="StudentCart" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="learnwithniteshsirModelStoreContainer" CdmEntityContainer="learnwithniteshsirEntities">
+          <EntitySetMapping Name="Account">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="coursecontent">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.coursecontent">
+              <MappingFragment StoreEntitySet="coursecontent">
+                <ScalarProperty Name="content_id" ColumnName="content_id" />
+                <ScalarProperty Name="CourseThumbnail" ColumnName="CourseThumbnail" />
+                <ScalarProperty Name="ImagesUrl" ColumnName="ImagesUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CreateCourse">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.CreateCourse">
+              <MappingFragment StoreEntitySet="CreateCourse">
+                <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="CourseLevel" ColumnName="CourseLevel" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+                <ScalarProperty Name="Tage" ColumnName="Tage" />
+                <ScalarProperty Name="Leanguage" ColumnName="Leanguage" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstructorProfile">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.InstructorProfile">
+              <MappingFragment StoreEntitySet="InstructorProfile">
+                <ScalarProperty Name="InstructorId" ColumnName="InstructorId" />
+                <ScalarProperty Name="InstructorPhoneNumber" ColumnName="InstructorPhoneNumber" />
+                <ScalarProperty Name="InstructorAddress" ColumnName="InstructorAddress" />
+                <ScalarProperty Name="InstructorAbout" ColumnName="InstructorAbout" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginAccess">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.LoginAccess">
+              <MappingFragment StoreEntitySet="LoginAccess">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Emailid" ColumnName="Emailid" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="Logintime" ColumnName="Logintime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Message">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.Message">
+              <MappingFragment StoreEntitySet="Message">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+                <ScalarProperty Name="Chat" ColumnName="Chat" />
+                <ScalarProperty Name="sno" ColumnName="sno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialMedia">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.SocialMedia">
+              <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="socialmediaurl" ColumnName="socialmediaurl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentCart">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.StudentCart">
+              <MappingFragment StoreEntitySet="StudentCart">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="sno" ColumnName="sno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentProfile">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.StudentProfile">
+              <MappingFragment StoreEntitySet="StudentProfile">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="About" ColumnName="About" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Content">
+            <EntityTypeMapping TypeName="learnwithniteshsirModel.Content">
+              <MappingFragment StoreEntitySet="Content">
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

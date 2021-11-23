@@ -1,0 +1,1234 @@
+﻿
+@{
+    ViewBag.Title = "NewCourse";
+    Layout = "~/Views/Shared/_Instructor.cshtml";
+}
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- include summernote css/js -->
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    <!-- include libraries(jQuery, bootstrap) -->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- include codemirror (codemirror.css, codemirror.js, xml.js, formatting.js) -->
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+
+
+
+    <!-- include summernote css/js-->
+
+    <link href="summernote.css">
+
+    <script src="summernote.js"></script>
+
+    <script>
+
+
+
+        $('.summernote').summernote({
+
+
+
+            height: 150,
+
+            //set editable area's height
+
+            codemirror: { // codemirror options
+
+                theme: 'monokai'
+
+            }
+
+        });
+
+    </script>
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="csrf-token" content="It5tkqKymT3xVIuU4kvxSx73MuR8FfQWwDa6hwlB">
+
+    <meta name="keywords"
+          content="Course LMS">
+
+    <meta name="description" content="Course LMS">
+
+    <meta name="author" content="Course LMS">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <meta name="copyright" content="Course LMS">
+
+    <meta name="subject" content="Course LMS 3.5">
+
+    <title>Course LMS - Course Create</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+
+    <!-- Start css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Apex css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+
+    <!-- Summernote css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.css" rel="stylesheet">
+
+    <!-- Start css -->
+    <!-- Switchery css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- Slick css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/css/dropify.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/asset_rumbok/css/icofont.css">
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- Datepicker css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- Summernote css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.css" rel="stylesheet">
+
+    <!-- Code Mirror css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/code-mirror/codemirror.css" rel="stylesheet">
+
+    <!-- dropzone -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- Select2 css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Tagsinput css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css" rel="stylesheet" type="text/css">
+
+    <!-- touchspin -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css">
+
+    <!-- X-editable css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-xeditable/css/bootstrap-editable.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- https://www.demo.courselms.com/public/project_assets -->
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/icons.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/custom.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/css/video-js.css">
+
+    <!-- End css -->
+
+    <link rel="stylesheet" type="text/css" href="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/css/notify.css" />
+
+
+
+
+
+
+
+</head>
+
+<body style="margin-left:20%">
+
+
+
+
+
+    <!-- Start Containerbar -->
+
+    <div id="containerbar">
+
+
+
+        <!-- End Breadcrumbbar -->
+        <!-- Start Contentbar -->
+
+        <div class="contentbar">
+
+
+
+            <!-- BEGIN:content -->
+
+            <div class="card m-b-30">
+
+                <h4 class="card-header">Add new course</h4>
+
+                <div class="card-body mx-3">
+
+                    <form action="https://www.demo.courselms.com/dashboard/course/store" method="post" enctype="multipart/form-data">
+
+                        <input type="hidden" name="_token" value="It5tkqKymT3xVIuU4kvxSx73MuR8FfQWwDa6hwlB">
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-title">
+
+                                Course Title <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <input type="text" required
+                                       value=""
+                                       class="form-control "
+                                       id="val-title" name="title" placeholder="Enter Course Title" aria-required="true" autofocus>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-slug">
+
+                                Slug <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <input type="text"
+                                       required value=""
+                                       class="form-control "
+                                       id="val-slug" name="slug" aria-required="true">
+
+                                <span id="error_email"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-provider">
+
+                                Course Level <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <select class="form-control lang " id="val-provider" name="level" required>
+
+                                    <option value="">
+
+                                        Select Level
+
+                                    </option>
+
+                                    <option value="Beginner">
+
+                                        Beginner
+
+                                    </option>
+
+                                    <option value="Advanced">
+
+                                        Advanced
+
+                                    </option>
+
+                                    <option value="All Levels">
+
+                                        All Levels
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-suggestions">
+
+                                Details
+
+                            </label>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-img">
+
+                                Course Thumbnail <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <input type="hidden" required value="" class="form-control course_image " id="val-img" name="image">
+
+                                <img class="w-50 course_thumb_preview rounded shadow-sm d-none" src="" alt="#Course thumbnail">
+
+
+
+                                <input type="hidden" name="course_thumb_url" class="course_thumb_url" value="">
+
+                                <br>
+
+
+
+
+
+                                <a href="javascript:void()" onclick="openNav('https://www.demo.courselms.com/dashboard/media/manager/slide', 'thumbnail')" class="btn btn-primary media-btn mt-2 p-2">Upload From Media <i class="fa fa-cloud-upload ml-2" aria-hidden="true"></i> </a>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-website">
+
+                                Overview URL <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <input type="url" required value="" class="form-control " id="val-website" name="overview_url" placeholder="Overview URL" aria-required="true">
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-provider">
+
+                                Provider <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <select class="form-control lang " id="val-provider" name="provider" required>
+
+                                    <option value="">
+
+                                        Select Provider
+
+                                    </option>
+
+                                    <option value="Youtube">
+
+                                        Youtube
+
+                                    </option>
+
+                                    <option value="Vimeo">
+
+                                        Vimeo
+
+                                    </option>
+
+                                    <option value="HTML5">
+
+                                        HTML5
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-requirement">
+
+                                Requirements <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <div class="bootstrap-tagsinput">
+
+                                    <input type="text" class="" placeholder="Enter Requirements" id="val-requirement" name="requirement" data-role="tagsinput">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-outcome">
+
+                                Outcome <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <div class="bootstrap-tagsinput">
+
+                                    <input type="text" class="" placeholder="Enter Outcome" id="val-outcome" name="outcome" data-role="tagsinput">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-tag">
+
+                                Tags <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <div class="bootstrap-tagsinput">
+
+                                    <input type="text" class="" placeholder="Enter Tags" id="val-tag" name="tag" data-role="tagsinput">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="">
+
+                                Free Course
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <div class="switchery-list">
+
+                                    <input type="checkbox" name="is_free" class="js-switch-success" id="val-is_free" />
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div id="auto_hide">
+
+
+
+                            <div class="form-group row">
+
+                                <label class="col-lg-3 col-form-label">
+
+                                    Price?
+
+                                </label>
+
+                                <div class="col-lg-9">
+
+                                    <div class="input-group mb-3">
+
+                                        <div class="input-group-prepend">
+
+                                            <span class="input-group-text">$</span>
+
+                                        </div>
+
+                                        <input type="number" min="0" value="" name="price" class="form-control ">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="form-group row">
+
+                                <label class="col-lg-3 col-form-label" for="val-is_discount">
+
+                                    Discount?
+
+                                </label>
+
+                                <div class="col-lg-9">
+
+                                    <div class="switchery-list">
+
+                                        <input type="checkbox" name="is_discount" class="js-switch-success" id="val-is_discount" />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                            <div class="form-group" id="discount_price">
+
+                                <div class="row">
+
+                                    <label class="col-lg-3 col-form-label">
+
+                                        Price With Discount?
+
+                                    </label>
+
+                                    <div class="col-lg-9">
+
+                                        <div class="input-group mb-3">
+
+                                            <div class="input-group-prepend">
+
+                                                <span class="input-group-text">$</span>
+
+                                            </div>
+
+                                            <input type="number" min="0" value=""
+                                                   name="discount_price"
+                                                   class="form-control ">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="language">
+
+                                Language <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <select class="form-control lang " id="language" name="language" required>
+
+                                    <option value="">Select Provider</option>
+
+                                    <option value="English">English</option>
+
+
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-meta_title">
+
+                                Meta Title
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <div class="bootstrap-tagsinput">
+
+                                    <input type="text" placeholder="Enter Meta Title" class=" " id="val-meta_title" name="meta_title" data-role="tagsinput">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-meta_description">
+
+                                Meta Description
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <textarea id="val-meta_description" name="meta_description" class="form-control " data-role="tagsinput"> </textarea>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label" for="val-category_id">
+
+                                Category <span class="text-danger">*</span>
+
+                            </label>
+
+                            <div class="col-lg-9">
+
+                                <select class="form-control lang " id="val-category_id" name="category_id" required>
+
+                                    <option value="" class="mb-2">
+
+                                        Please Category
+
+                                    </option>
+
+                                    <option value="1">Web Development</option>
+
+                                    <option value="2">Education</option>
+
+                                    <option value="3">Business</option>
+
+                                    <option value="4">Finance and Banking</option>
+
+                                    <option value="5">Marketing</option>
+
+                                    <option value="6">Photography</option>
+
+                                    <option value="7">Music</option>
+
+                                    <option value="8">Mobile Apps Development</option>
+
+                                    <option value="9">Photography</option>
+
+                                    <option value="11">Nature</option>
+
+                                    <option value="12">English Language SS1</option>
+
+                                    <option value="13">231213123</option>
+
+                                    <option value="14">Salman Ahmed</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label"></label>
+
+                            <div class="col-lg-8">
+
+                                <button type="submit" class="btn btn-primary">
+
+                                    Submit
+
+                                </button>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- END:content -->
+
+
+
+        </div>
+
+        <!-- End Contentbar -->
+        <!-- Start Footerbar -->
+
+        <div class="footerbar">
+
+            <footer class="footer">
+
+                <p class="mb-0">© 2020 Course LMS v3.5</p>
+
+            </footer>
+
+        </div>
+
+        <!-- End Footerbar -->
+        <!--Modal or Delete Modal-->
+
+        <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-media-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+    "use strict"
+
+    function confirm_modal(delete_url) {
+
+        jQuery('#confirm-delete').modal('show', {backdrop: 'static'});
+
+        document.getElementById('delete_link').setAttribute('href', delete_url);
+
+    }
+
+        </script>
+
+
+
+
+
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="myModalLabel">Confirmation</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>Delete confirmation message</p>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                        <a id="delete_link" type="submit" class="btn btn-danger">Delete</a>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="mySidenav" class="sidenav shadow rounded">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div id="master_media_section"></div>
+
+        </div>
+
+
+
+        <input type="hidden" value="https://demo.courselms.com" id="domain_name">
+
+
+
+    </div>
+
+    <!-- End Rightbar -->
+    </div>
+
+    <!-- End Containerbar -->
+    <!-- Start js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/popper.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/bootstrap.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/modernizr.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/detect.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.slimscroll.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/vertical-menu.js"></script>
+
+    <!-- Switchery js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-switchery.js"></script>
+
+    <!-- Apex js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/irregular-data-series.js"></script>
+
+    <!-- Chart js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart-bundle.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-chart-chartjs.js"></script>
+
+    <!-- Slick js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/slick/slick.js"></script>
+
+    <!-- Select2 js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/select2/select2.js"></script>
+
+    <!-- Summernote JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.js"></script>
+
+
+
+    <!-- Pnotify js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-pnotify.js"></script>
+
+
+
+
+
+    <!-- Datepicker JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/datepicker/datepicker.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/datepicker/i18n/datepicker.en.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-datepicker.js"></script>
+
+
+
+    <!-- Wysiwig js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.slugify.js"></script>
+
+
+
+    <!-- Wysiwig js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/tinymce/tinymce.js"></script>
+
+    <!-- Summernote JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.js"></script>
+
+    <!-- Code Mirror JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/code-mirror/codemirror.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/code-mirror/htmlmixed.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/code-mirror/css.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/code-mirror/javascript.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/code-mirror/xml.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-editor.js"></script>
+
+
+
+    <!-- Dropzone js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/dropzone/dist/dropzone.js"></script>
+
+
+
+    <!-- Input Mask js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-inputmask/jquery.inputmask.bundle.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-inputmask.js"></script>
+
+
+
+    <!-- MaxLength js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-maxlength.js"></script>
+
+
+
+    <!-- Select2 js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/select2/select2.js"></script>
+
+    <!-- Tagsinput js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/typeahead.bundle.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-select.js"></script>
+
+
+
+    <!-- Touchspin js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-touchspin.js"></script>
+
+
+
+
+
+
+
+    <!-- Form Step js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/jquery-step/jquery.steps.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-wizard.js"></script>
+
+
+
+    <!-- X-editable js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/bootstrap-xeditable/js/bootstrap-editable.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/moment/moment.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-form-xeditable.js"></script>
+
+
+
+    <!-- Custom Dashboard js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-dashboard.js"></script>
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/videojs-ie8.min.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/video.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/js/dropify.js"></script>
+
+    <!-- Core js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/core.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/script.js"></script>
+
+
+
+
+
+    <!-- End js -->
+
+
+
+    <script>
+
+
+
+    var notify = {
+
+        timeout: "5000",
+
+        animatedIn: "bounceInRight",
+
+        animatedOut: "bounceOutRight",
+
+        position: "top-right"
+
+    }
+
+
+
+    </script>
+
+
+
+    <script type="text/javascript" src="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/js/notify.js"></script>
+
+    <script type="text/javascript" src="https://www.demo.courselms.com/public/assets/js/custom/course.js"></script>
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+
+
+            "use strict"
+
+
+
+        try {
+
+            $.post('https://www.demo.courselms.com/dashboard/media/manager/slide', {_token:'It5tkqKymT3xVIuU4kvxSx73MuR8FfQWwDa6hwlB'}, function(data){
+
+                $('#master_media_section').html(data);
+
+            });
+
+        } catch (error) {
+
+            location.reload();
+
+        }
+
+
+
+
+
+        });
+
+
+
+        $('.dropify').dropify();
+
+
+
+        $('#datetimepicker1').datetimepicker();
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+

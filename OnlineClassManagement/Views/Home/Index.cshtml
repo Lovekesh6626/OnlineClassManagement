@@ -1,0 +1,541 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="~/Content/css/styles.css" />
+
+    <title>LearninGO - Online Class Website</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="navigation container">
+            <div class="logo">
+                <img width="100px" height="50px" src="~/Content/images/photo1636707343.jpeg" />
+            </div>
+
+            <div class="menu">
+                <div class="top-nav">
+                    <div class="logo">
+                        <img src="~/Content/images/photo1636707343.jpeg" />
+                    </div>
+                    <div class="close">
+                        <i class="bx bx-x"></i>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <ul class="nav-list">
+
+
+                    <li class="nav-item">
+
+                        <button  class="nav-link"  style="background-color:Highlight; color:white; height:50px; padding:20px; "><a href="/Home/InstructorSignup">Become As Instructor</a></button>
+
+                    </li>
+                    &nbsp;
+                    <li class="nav-item">
+                        <button   class="nav-link" style="background-color:Highlight; color:white; height:50px; margin-right:50px; padding:20px" ><a href="/Home/StudentSignup">Become  As Student</a></button>
+                    </li>
+
+
+                </ul>
+
+
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="header">
+        <!-- Navigation -->
+        <!-- Hero -->
+
+
+        <div class="hero-content" style="text-align:center">
+
+            <a class="btn" href="#" style="margin-top:275%;margin-left:200%;">classes now</a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div class="title">
+        <h1>Favourite Categories</h1>
+    </div>
+
+    <main>
+        <section class="advert section">
+            <div class="advert-center container dotted">
+
+
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2 style="color:black;">
+                                Software <br />
+                                Course
+                            </h2>
+                            <h4 style="color:black;">Worlds Best Courses</h4>
+                            <a class="btn" href="/Home/Developing">Explore Now</a>
+                        </div>
+                    </div>
+                    <img src="~/Content/images/software course.png" alt="">
+                </div>
+
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2 style="color:black;">
+                                Business <br />
+                                Course
+                            </h2>
+                            <h4 style="color:black;">Worlds Best Courses</h4>
+                            <a class="btn" href="/Home/Business">Explore Now</a>
+                        </div>
+                    </div>
+                    <img src="~/Content/images/busienss course.jpg" alt="">
+                </div>
+
+
+                <div class="advert-box">
+                    <div class="dotted">
+                        <div class="content">
+                            <h2 style="color:black;">
+                                Designing <br />
+                                Course
+                            </h2>
+                            <h4 style="color:black;">Worlds Best Courses</h4>
+                            <a class="btn" href="/Home/Designing">Explore Now</a>
+                        </div>
+                    </div>
+                    <img src="~/Content/images/designing course.jpg" alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="section featured">
+            <div class="title">
+                <h1>Featured Products</h1>
+            </div>
+
+            <div class="product-center container">
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/asp.net mvc.png" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/ASPMVCDetails">
+                            <h3>Asp.Net MVC</h3>
+                        </a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/FRONTEND.jpg" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/FrontendManagementDetails"><h3>Frontend Development</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/adobe photoshop.png" alt="">
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/AdobePhotoShopDetails"><h3>Adobe PhotoShop</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/Digital-Marketing.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/DigitalMarketingDetails"><h3>Digital Marketing</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Latest -->
+        <section class="section featured">
+            <div class="title">
+                <h1>Latest Products</h1>
+            </div>
+
+            <div class="product-center container">
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/ethical hacking.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/EthicalHackingDetails"><h3>Ethical Hacking</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/finance.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/FinanceManagementDetails"><h3>Finance Management</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/BACKEND.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/BackendDvevlopmentDetails"><h3>Backend Development</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/adobe illustrator.png" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/AdobeIllusatorDetails"><h3>Adobe Illustrator</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/data science.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/DataScienceDetails"><h3>data science</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/artificial intelligence.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/ArtificialIntelligenceDetails"><h3>Artificial Intelligence</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/corel.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/ProductDetails"><h3>Corel Draw</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-header">
+                        <img src="~/Content/images/accounting.jpg" alt="">
+
+                        <ul class="icons">
+                            <span><i class="bx bx-heart"></i></span>
+                            <span><i class="bx bx-shopping-bag"></i></span>
+                            <span><i class="bx bx-search"></i></span>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="/Home/AccountingDetails"><h3>Accounting</h3></a>
+                        <div class="rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bx-star"></i>
+                        </div>
+                        <h4 class="price">Free</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Banner -->
+        <section class="section">
+            <div class="product-banner">
+                <div class="left">
+                    <img src="~/Content/images/sdc.jpg" alt="" />
+                </div>
+                <div class="right">
+                    <div class="content">
+                        <h2><span class="discount">70% </span> SALE OFF</h2>
+                        <h1>
+                            <span>Grab Your</span>
+                            <span> Software Course</span>
+                        </h1>
+                        <a class="btn" href="/Home/Product">shop now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="testimonial-center container">
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+                        fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="~/Content/images/profile1.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+                        fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="~/Content/images/profile2.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+                <div class="testimonial">
+                    <span>&ldquo;</span>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis,
+                        fugiat labore. Veritatis et omnis consequatur.
+                    </p>
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bx-star"></i>
+                    </div>
+                    <div class="img-cover">
+                        <img src="~/Content/images/profile3.jpg" alt="" />
+                    </div>
+                    <h4>Will Smith</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="section">
+            <div class="brands-center container">
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand1.png" alt="" />
+                </div>
+                <div class="brand">
+                    <img src="./images/brand2.png" alt="" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <!-- End Footer -->
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <!-- Custom Script -->
+        <script src="./js/index.js"></script>
+</body>
+
+</html>
+

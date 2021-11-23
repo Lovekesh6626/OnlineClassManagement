@@ -1,0 +1,114 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .input-container {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            padding: 10px;
+            background: purple;
+            color: white;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+            .input-field:focus {
+                border: 2px solid dodgerblue;
+            }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: purple;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .btn1 {
+            background-color: purple;
+            padding: 10px 10px;
+            border: none;
+            width: 100px;
+            height: 35px;
+            cursor: pointer;
+            opacity: 1;
+            color: white;
+            border-radius: 5px;
+        }
+
+            .btn1:hover {
+                opacity: 1;
+            }
+
+        .btn:hover {
+            opacity: 1;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/action_page.php" style="max-width:500px;margin:auto">
+        <h2>Login Here</h2>
+        <div>
+            <button class="btn1 btn">Admin</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button class="btn1 btn">instructor</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn1 btn">Student</button>
+
+        </div>
+        <br />
+
+        <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text" placeholder="Email Address" name="email">
+        </div>
+
+        <!----<div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>-->
+
+        <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Password" name="psw">
+        </div>
+
+        <button type="submit" class="btn" style="border-radius:10px"><a style="color:white" href="/Student/MyProfile">Login</a></button>
+        <br />
+        <button type="submit" class="btn" style="background-color:red ;border-radius:10px; "><a style="color:white" href="/Instructor/Dashbord">Login</a></button>
+        <button type="submit" class="btn" style="background-color:black ;border-radius:10px; "><a style="color:white" href="/Admin/Dashboard">Login</a></button>
+        <p>Create a Now  Acount</p>
+        <button class="btn1 btn">Register</button>
+
+    </form>
+
+</body>
+
+</html>

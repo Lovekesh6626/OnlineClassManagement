@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "BackEndContent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Courses </title>
+    <link rel="stylesheet" href="~/Content/css/testing.css" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>BackEnd</h1>
+    </div>
+    <div class="grid-row reverse video-gallery">
+        <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Introduction <input style="margin-left:400px" type="checkbox" /></label>
+        <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Linux <input style="margin-left:465px" type="checkbox" /></label>
+        <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Security <input style="margin-left:447px" type="checkbox" /></label>
+        <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">TroubleShooting <input style="margin-left:520px" type="checkbox" /></label>
+        <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Sql Injection <input style="margin-left: 520px" type="checkbox" /></label>
+        <input type="radio" value="6" name="video-list" id="video-6" /><label for="video-6">Network Hack <input style="margin-left: 520px" type="checkbox" /></label>
+        <!-- videos -->
+        <div class="video video-1">
+            <iframe width="750" height="315" src="https://www.youtube.com/embed/ROqDTIxRX0Y" frameborder="0" allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video video-2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9iGoDNlKY-g" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="video video-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l70UhhNalqA" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video video-4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XDrB5c4-c9Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video video-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UXP307MGQzs" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video video-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0kY0Q5hdjDI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- videos -->
+    </div>
+    <button type="button" class="btn btn-Secondary btn-lg">@Html.ActionLink("Complete", "CourseCertificate", "Home")</button>
+
+</body>
+
+</html>
+
+
+

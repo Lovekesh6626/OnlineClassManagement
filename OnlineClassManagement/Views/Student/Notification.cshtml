@@ -1,0 +1,300 @@
+﻿
+@{
+    ViewBag.Title = "Notification";
+    Layout = "~/Views/Shared/_Student.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Rumon Prince Sohan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="copyright" content="Course LMS">
+    <meta name="subject" content="Course LMS 3.5">
+    <meta name="description" content="Course LMS">
+    <meta name="author" content="Course LMS">
+
+    <title>Course LMS</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+    <link href="https://www.demo.courselms.com/public/css/font.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/line-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/animate.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/fancybox.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/tooltipster.bundle.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/style.css">
+    <link href="https://www.demo.courselms.com/public/css/frontend.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- end inject -->
+</head>
+
+<body>
+
+    <div class="dashboard-sidebar" style="height:200px;z-index:500">
+
+
+        <div class="dashboard-nav-container" style="background: #343A40; color: white; margin-bottom: 20px; padding: 50px">
+            <h2 style="color:white">LearninGO </h2>
+
+            <div class="humburger-menu">
+
+
+                <div class="side-menu-wrap" style="background:#343A40; margin-top:100px; width:260px; margin-left:-51px; ">
+                    <ul class="side-menu-ul" style="padding:-18px">
+
+                        <li class="sidenav__item page-active" style="padding:20px;">
+                            <a href="/Student/MyProfile" style="font-size:20px"><i class="glyphicon glyphicon-user"></i>My Profile</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Message" style="color:white;font-size:20px"><i class="glyphicon glyphicon-envelope"></i>Message</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Notification" style="color:white;font-size:20px"><i class="glyphicon glyphicon-bell"></i>Notfications</a>
+                        </li>
+
+                        <li class="sidenav__item" style="padding:20px;">
+                            <a href="/Home/Index" style="color:white;font-size:20px">
+                                <i class="glyphicon glyphicon-log-out"></i>Logout
+                            </a>
+                            
+                        </li>
+                    </ul>
+
+
+                </div>
+                <!-- end side-menu-wrap -->
+            </div>
+        </div><!-- end dashboard-sidebar -->
+
+
+
+
+
+
+
+
+        <div class="dashboard-content-wrap" style="margin-top:30px">
+            <div class="container-fluid">
+
+
+
+                <div class="row">
+                    <div class="col-lg-12 column-lmd-2-half column-md-full">
+                        <div class="dashboard-shared">
+                            <div class="mess-dropdown">
+
+                                <div class="dashboard-title margin-bottom-20px">
+                                    <h4 class="widget-title font-size-18 d-flex align-items-center">
+                                        Notifications
+                                        <a href="https://www.demo.courselms.com/mark-as-all-read?19" class="primary-color-3 ml-auto font-size-13">Mark all as read</a>
+                                    </h4>
+                                </div><!-- end dashboard-title -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">6 months ago</span>
+                                            <p class="text"> new course  Learn </p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">9 months ago</span>
+                                            <p class="text">The Complete Financial  Course</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Digital finance Marketing Course</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Outcome Based Education (OBE) &amp; Academic Quality Assurance</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Microsoft SQL Server 2019 for Everyone</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Advance Wordpress</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Flutter &amp; Dart - The Complete Guide</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  The Complete Android N Developer Course</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                                <div class="">
+                                    <div class="mess__item">
+                                        <div class="icon-element bg-color-1 text-white">
+                                            <i class="la la-bolt"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="time">10 months ago</span>
+                                            <p class="text">You enrolled new course  Wordpress For Beginner</p>
+                                        </div>
+                                    </div><!-- end mess__item -->
+                                </div><!-- end mess__item -->
+                            </div><!-- end mess-dropdown -->
+                        </div><!-- end dashboard-shared -->
+                    </div><!-- end col-lg-5 -->
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-content mt-0 border-top-0 text-center">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p class="copy__desc">&copy; 2021  Course LMS </a></p>
+                                </div><!-- end col-lg-12 -->
+                            </div><!-- end row -->
+                        </div><!-- end copyright-content -->
+                    </div><!-- end col-lg-12 -->
+                </div>
+
+            </div><!-- end container-fluid -->
+        </div><!-- end dashboard-content-wrap -->
+        </section><!-- end dashboard-area -->
+        <!-- ================================
+            END DASHBOARD AREA
+        ================================= -->
+        <!-- start scroll top -->
+        <div id="scroll-top">
+            <i class="fa fa-angle-up" title="Go top"></i>
+        </div>
+        <!-- end scroll top -->
+        <!-- template js files -->
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/popper.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap-select.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/owl.carousel.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/magnific-popup.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/isotope.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/waypoint.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.counterup.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/particles.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/particlesRun.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/fancybox.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/wow.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/date-time-picker.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.filer.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/emojionearea.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/smooth-scrolling.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/tooltipster.bundle.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/main.js"></script>
+        <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.js"></script>
+        <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/jquery.dataTables.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/custom.js"></script>
+        <script src="https://www.demo.courselms.com/public/js/frontend.js"></script>
+        <script src="https://www.demo.courselms.com/public/js/notify.js"></script>
+
+        <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body shadow" id="show-form">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body shadow" id="show-media-form">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

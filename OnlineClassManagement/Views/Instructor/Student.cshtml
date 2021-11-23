@@ -1,0 +1,594 @@
+﻿
+@{
+    ViewBag.Title = "Student";
+    Layout = "~/Views/Shared/_Instructor.cshtml";
+}
+
+
+
+
+
+@{
+
+    ViewBag.Title = "Student";
+
+}
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="csrf-token" content="pJdCxBcF5hmMYZfvSZm5LVzR6zHbvXeibw6G6nQ3">
+
+    <meta name="keywords"
+          content="Course LMS">
+
+    <meta name="description" content="Course LMS">
+
+    <meta name="author" content="Course LMS">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <meta name="copyright" content="Course LMS">
+
+    <meta name="subject" content="Course LMS 3.5">
+
+    <title>Course LMS - Student</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+
+    <!-- Start css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Apex css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+
+    <!-- Summernote css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.css" rel="stylesheet">
+
+    <!-- Start css -->
+    <!-- Switchery css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- Slick css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/css/dropify.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/asset_rumbok/css/icofont.css">
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/icons.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/custom.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/css/video-js.css">
+
+    <!-- End css -->
+
+    <link rel="stylesheet" type="text/css" href="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/css/notify.css" />
+
+
+
+
+
+
+
+</head>
+
+<body class="vertical-layout">
+
+
+
+
+
+    <!-- Start Containerbar -->
+
+    <div id="containerbar">
+
+
+
+
+
+
+
+        <!-- End Breadcrumbbar -->
+        <!-- Start Contentbar -->
+
+        <div class="contentbar">
+
+
+
+            <div class="card mx-2 mb-3">
+
+                <div class="card-header">
+
+                    <div class="float-left">
+
+                        <h3>All Students</h3>
+
+                    </div>
+
+                    <div class="float-right">
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <form method="get" action="">
+
+                                    <div class="input-group">
+
+                                        <input type="text" name="search" class="form-control col-12"
+                                               placeholder="Search by name or email"
+                                               value="">
+
+                                        <div class="input-group-append">
+
+                                            <button class="btn btn-primary" type="submit">Search</button>
+
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="card-body table-responsive">
+
+                    <table class="table table-bordered table-hover text-center">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>S/L</th>
+
+                                <th>Image</th>
+
+                                <th>Name</th>
+
+                                <th>Email</th>
+
+                                <th>Phone</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>1</td>
+
+                                <td>
+
+                                    <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png" class="img-thumbnail rounded-circle avatar-lg"><br />
+
+                                </td>
+
+                                <td>Prince</td>
+
+                                <td>
+
+                                    student@mail.com
+
+                                </td>
+
+                                <td>
+
+                                    N/A
+
+                                </td>
+
+
+
+                                <td>
+
+                                    <div class="kanban-menu">
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 m-0 border-0 l-h-20 font-16" type="button"
+                                                    id="KanbanBoardButton1" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-vertical-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right action-btn"
+                                                 aria-labelledby="KanbanBoardButton1" x-placement="bottom-end">
+
+                                                <a class="dropdown-item" href="@Url.Action("StudentDetails")">
+
+                                                    <i class="feather icon-edit-2 mr-2"></i>Details
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                        <div class="float-left">
+
+
+
+                        </div>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- End Contentbar -->
+        <!-- Start Footerbar -->
+
+        <!-- End Footerbar -->
+        <!--Modal or Delete Modal-->
+
+        <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-media-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+    "use strict"
+
+    function confirm_modal(delete_url) {
+
+        jQuery('#confirm-delete').modal('show', {backdrop: 'static'});
+
+        document.getElementById('delete_link').setAttribute('href', delete_url);
+
+    }
+
+        </script>
+
+
+
+
+
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="myModalLabel">Confirmation</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>Delete confirmation message</p>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                        <a id="delete_link" type="submit" class="btn btn-danger">Delete</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="mySidenav" class="sidenav shadow rounded">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div id="master_media_section"></div>
+
+        </div>
+
+
+
+        <input type="hidden" value="https://demo.courselms.com" id="domain_name">
+
+
+
+    </div>
+
+    <!-- End Rightbar -->
+    </div>
+
+    <!-- End Containerbar -->
+    <!-- Start js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/popper.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/bootstrap.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/modernizr.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/detect.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.slimscroll.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/vertical-menu.js"></script>
+
+    <!-- Switchery js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-switchery.js"></script>
+
+    <!-- Apex js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/irregular-data-series.js"></script>
+
+    <!-- Chart js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart-bundle.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-chart-chartjs.js"></script>
+
+    <!-- Slick js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/slick/slick.js"></script>
+
+    <!-- Select2 js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/select2/select2.js"></script>
+
+    <!-- Summernote JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.js"></script>
+
+
+
+    <!-- Pnotify js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-pnotify.js"></script>
+
+
+
+
+
+
+
+    <!-- Custom Dashboard js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-dashboard.js"></script>
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/videojs-ie8.min.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/video.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/js/dropify.js"></script>
+
+    <!-- Core js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/core.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/script.js"></script>
+
+
+
+
+
+    <!-- End js -->
+
+
+
+    <script>
+
+
+
+    var notify = {
+
+        timeout: "5000",
+
+        animatedIn: "bounceInRight",
+
+        animatedOut: "bounceOutRight",
+
+        position: "top-right"
+
+    }
+
+
+
+    </script>
+
+
+
+    <script type="text/javascript" src="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/js/notify.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+
+
+            "use strict"
+
+
+
+        try {
+
+            $.post('https://www.demo.courselms.com/dashboard/media/manager/slide', {_token:'pJdCxBcF5hmMYZfvSZm5LVzR6zHbvXeibw6G6nQ3'}, function(data){
+
+                $('#master_media_section').html(data);
+
+            });
+
+        } catch (error) {
+
+            location.reload();
+
+        }
+
+
+
+
+
+        });
+
+
+
+        $('.dropify').dropify();
+
+
+
+        $('#datetimepicker1').datetimepicker();
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+

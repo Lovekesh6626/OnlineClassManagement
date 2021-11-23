@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Your Cart</title>
+</head>
+
+<body>
+    
+    
+    <!-- Cart Items -->
+    <div class="container-md cart">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Level</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="~/Content/images/corel.jpg" alt="">
+                        <div>
+                            <p>Coral Draw</p>
+                            <span>Price: Free</span>
+                            <br />
+                            <a href="#">remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <select>
+                        <option value="Select Level" selected disabled>Select Level</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Intermediate</option>
+                        <option value="3">Advance</option>
+
+                    </select>
+                </td>
+                <td>Free</td>
+            </tr>
+      
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>Free</td>
+                </tr>
+            </table>
+            <a href="/Home/Mycourse" class="checkout btn">Proceed To Checkout</a>
+
+        </div>
+
+    </div>
+
+
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Custom Script -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

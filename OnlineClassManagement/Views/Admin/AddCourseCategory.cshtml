@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "AddCourseCategory";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+
+<style>
+    .MainDiv {
+        margin: -100px -100px;
+    }
+
+    .SubmitButton {
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-bottom: -10px;
+    }
+
+        .SubmitButton:hover {
+            background-color: #555555;
+            color: white;
+        }
+</style>
+
+<div class="MainDiv">
+    <h2>Add Course Category</h2>
+    <div style="background-color:gray;padding:30px 20px;border-radius:8px;">
+        <form action="/action_page.php">
+            <label for="fullName">Choose Thumbnail</label>
+            <input type="file" id="" name="myfile"><br><br>
+            <label for="fullName">Category Name</label>
+            <input type="text" class="form-control" id="CategoryName" placeholder="Enter Category name">
+            <label for="fullName">Description</label>
+            <input type="text" class="form-control" id="Description" placeholder="Enter Description">
+            <button class="SubmitButton">Submit</button>
+        </form>
+    </div>
+</div>
+
+

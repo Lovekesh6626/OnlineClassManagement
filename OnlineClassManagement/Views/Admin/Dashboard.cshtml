@@ -1,0 +1,355 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["red", "green", "blue", "orange", "brown"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "World Wine Production 2018"
+                }
+            }
+        });
+    </script>
+
+
+    <style>
+        .temp3 {
+            background-color: lightgray;
+            padding: 20px;
+            margin: 10px;
+            width: 350px;
+            height: 350px;
+            border-radius: 8px;
+        }
+
+        .temp2 {
+            background-color: gray;
+            display: flex;
+            place-content: center;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .text {
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+        }
+
+        .temp {
+            background-color: lightgray;
+            padding: 20px;
+            margin: 10px;
+            width: 800px;
+            height: 350px;
+            border-radius: 8px;
+        }
+
+        .card-body {
+            background-color: Black;
+            border-radius: 8px;
+        }
+
+        .col-7 {
+            color: white;
+        }
+
+        .inst-1 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .ins-1.img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .card2 {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 90%;
+            height: 90%;
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        .button-view-more {
+            padding: 8px;
+            background-color: #000;
+            border-radius: 8px;
+            font-size: 18px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .button-view-more-text {
+            color: white;
+        }
+
+
+        button1 {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+            button1:hover, a:hover {
+                opacity: 0.7;
+            }
+    </style>
+}
+<div class="temp2">
+    <div style="display:flex">
+        <div class="temp">
+            <div style="display:flex; place-content:center; height:50px;">
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>90.00$</h4>
+                                    <p class="font-14 mb-0">This Month Revenue</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>10.00$</h4>
+                                    <p class="font-14 mb-0">Last Month Revenue</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>100.00$</h4>
+                                    <p class="font-14 mb-0">Total Revenue</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width:500px; height:100Px; align-items:center">
+
+                <canvas id="myChart" style="height: 250px; display:initial; padding: 10px; display: initial; margin-top: 20px;"></canvas>
+
+                <script>
+                    var xValues = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov"];
+                    var yValues = [55, 49, 44, 24, 25, 55, 49, 44, 24, 55, 80];
+                    var barColors = ["Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"];
+
+                    new Chart("myChart", {
+                        type: "bar",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                backgroundColor: barColors,
+                                data: yValues
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: "2021 Revenue..."
+                            }
+                        }
+                    });
+                </script>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="temp3">
+            <div style="font-weight:bolder"><h>Popular Instructors</h></div>
+
+            <div>
+                <div>
+                    <div class="card2">
+                        <img src="~/Content/images/profile2.jpg" alt="instructor" style="width:45%; border-radius:50%">
+                        <h1>Nitesh</h1>
+                        <p class="title">Teacher</p>
+                        <p>Jaipur, Rajasthan</p>
+                        <!--<div style="margin: 24px 0;">-->
+                        @*<a href="~/Content/"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>*@
+                        <!--</div>-->
+                        <div class="button-view-more">
+                            <a class="button-view-more-text" href="/InstructorProfile/Index">View More</a>
+                        </div>
+                        @*<button1>View More</button1>*@
+                        @*<button1 type="button" onclick="location.href='<%: @Url.Action("Index", "InstructorProfile") %>'">View More</button1>*@
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="temp2" style="margin-top:0px">
+    <div style="display:flex">
+        <div class="temp">
+            <div style="display:flex; place-content:center; height:50px;">
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>20</h4>
+                                    <p class="font-14 mb-0">Course Added This Month</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>35</h4>
+                                    <p class="font-14 mb-0">Course Added This Month</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-4">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-7">
+                                    <h4>150</h4>
+                                    <p class="font-14 mb-0">Total Course Published</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:500px; height:100Px; align-items:center">
+
+                <canvas id="myChart" style="height: 250px; display:initial; padding: 10px; display: initial; margin-top: 20px;"></canvas>
+
+                <script>
+                    var xValues = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov"];
+                    var yValues = [55, 49, 44, 24, 25, 55, 49, 44, 24, 55, 80];
+                    var barColors = ["Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black", "Black"];
+
+                    new Chart("myChart", {
+                        type: "bar",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                backgroundColor: barColors,
+                                data: yValues
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: "2021 Revenue..."
+                            }
+                        }
+                    });
+                </script>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="temp3">
+            <div style="font-weight:bolder"><h>Most Selling Cousre</h></div>
+
+            <div>
+                <div>
+                    <div class="card2">
+                        <img src="~/Content/images/artificial intelligence.jpg" alt="instructor" style="width:45%; border-radius:8%">
+                        <h1>artificial intelligence</h1>
+                        <p class="title">Added By : Nitesh</p>
+                        <p>Details..........</p>
+                        <!--<div style="margin: 24px 0;">-->
+                        @*<a href="~/Content/"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>*@
+                        <!--</div>-->
+                        <p><button1>View More</button1></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

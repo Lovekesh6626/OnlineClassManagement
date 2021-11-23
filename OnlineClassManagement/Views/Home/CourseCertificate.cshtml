@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "CourseCertificate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+<hr/>
+<h2>CourseCertificate</h2>
+
+ <br/>
+<br/>
+<br/>
+
+<div style="width:800px; height:600px; padding:20px; text-align:center; border: 10px solid #787878">
+    <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
+        <h2 style="text-align:center"> LearninGo</h2><br />
+        <span style="font-size:50px; font-weight:bold">Certificate of Completion</span>
+        <br><br>
+        <span style="font-size:25px"><i>This is to certify that</i></span>
+        <br><br>
+        <span style="font-size:30px"><b>$student.getFullName()</b></span><br /><br />
+        <span style="font-size:25px"><i>has completed the course</i></span> <br /><br />
+        <span style="font-size:30px">Corel Draw</span> <br /><br />
+        <br /><br /><br /><br />
+        <span style="font-size:25px"><i>dated</i></span><br>
+        <p id="date"></p>
+        <script>
+document.getElementById("date").innerHTML = Date();
+        </script>
+       <!-- #set ($dt = $DateFormatter.getFormattedDate($grade.getAwardDate(), "MMMM dd, yyyy"))
+        <span style="font-size:30px"></span> -->
+    </div>
+</div>
+

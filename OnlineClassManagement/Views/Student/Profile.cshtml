@@ -1,0 +1,389 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Student.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Rumon Prince Sohan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="copyright" content="Course LMS">
+    <meta name="subject" content="Course LMS 3.5">
+    <meta name="description" content="Course LMS">
+    <meta name="author" content="Course LMS">
+
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+    <link href="https://www.demo.courselms.com/public/css/font.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/line-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/animate.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/fancybox.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/tooltipster.bundle.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/style.css">
+    <link href="https://www.demo.courselms.com/public/css/frontend.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- end inject -->
+</head>
+
+<body>
+
+    <div class="dashboard-sidebar" style="height:200px;z-index:500">
+
+
+        <div class="dashboard-nav-container" style="background: #343A40; color: white; margin-bottom: 20px; padding: 50px">
+            <h2 style="color:white">LearninGO </h2>
+
+            <div class="humburger-menu">
+
+
+                <div class="side-menu-wrap" style="background:#343A40; margin-top:100px; width:389px; margin-left:-51px; ">
+                    <ul class="side-menu-ul" style="padding:-18px">
+
+                        <li class="sidenav__item page-active" style="padding:20px;">
+                            <a href="/Student/MyProfile" style="font-size:20px"><i class="glyphicon glyphicon-user"></i>My Profile</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Message" style="color:white;font-size:20px"><i class="glyphicon glyphicon-envelope"></i>Message</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Notification" style="color:white;font-size:20px"><i class="glyphicon glyphicon-bell"></i>Notfications</a>
+                        </li>
+
+                        <li class="sidenav__item" style="padding:20px;">
+                            <a href="/Home/Index" style="color:white;font-size:20px">
+                                <i class="glyphicon glyphicon-log-out"></i>Logout
+                            </a>
+
+                        </li>
+                    </ul>
+
+
+                </div>
+                <!-- end side-menu-wrap -->
+            </div>
+        </div><!-- end dashboard-sidebar -->
+
+
+
+
+        <div class="dashboard-content-wrap">
+            <div class="container-fluid">
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <div class="card-box-shared">
+                            <div class="card-box-shared-title">
+                                <h3 class="widget-title">Settings info</h3>
+                            </div>
+                            <div class="card-box-shared-body">
+                                <div class="section-tab section-tab-2">
+                                    <ul class="nav nav-tabs" role="tablist" id="review">
+                                        <li role="presentation">
+                                            <a href="#profile" role="tab" data-toggle="tab" class="active" aria-selected="true">
+                                                Profile
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#password" role="tab" data-toggle="tab" aria-selected="false">
+                                                Password
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dashboard-tab-content mt-5">
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade active show" id="profile">
+                                            <form method="post" action="https://www.demo.courselms.com/student/profile/update/19" enctype="multipart/form-data">
+                                                <input type="hidden" name="_token" value="9e0dR97uuDW9QDYBA1CcNj03GVPUxQiHRVDDCXxg">                                        <div class="user-form">
+                                                    <div class="user-profile-action-wrap mb-5">
+                                                        <h3 class="widget-title font-size-18 padding-bottom-40px">Profile Settings</h3>
+                                                        <div class="user-profile-action d-flex align-items-center">
+                                                            <div class="user-pro-img">
+                                                                <img src="~/Content/images/WhatsApp Image 2021-11-15 at 02.46.26.jpeg" alt="Prince" class="img-fluid radius-round border">
+                                                            </div>
+                                                            <div class="upload-btn-box course-photo-btn">
+                                                                <input type="hidden" name="oldImage" value="uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png">
+                                                                <input type="file" name="image" value="">
+                                                            </div>
+                                                        </div><!-- end user-profile-action -->
+                                                    </div><!-- end user-profile-action-wrap -->
+                                                    <div class="contact-form-action">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Full Name<span class="primary-color-2 ml-1">*</span></label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="text" name="name" value="">
+                                                                        <span class="la la-user input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Email Address<span class="primary-color-2 ml-1">*</span></label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="email" readonly name="email" value="">
+                                                                        <span class="la la-envelope input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Phone Number</label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="number" name="phone" value="">
+                                                                        <span class="la la-phone input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Facebook</label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="text" name="fb" value="">
+                                                                        <span class="la la-phone input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Twitter</label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="text" name="tw" value="">
+                                                                        <span class="la la-phone input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+                                                            <div class="col-lg-6 col-sm-6">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">Linked In</label>
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" type="text" name="linked" value="">
+                                                                        <span class="la la-phone input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-6 -->
+                                                            <div class="col-lg-12">
+                                                                <div class="input-box">
+                                                                    <label class="label-text">About</label>
+                                                                    <div class="form-group">
+                                                                        <textarea class="message-control form-control" name="about"></textarea>
+                                                                        <span class="la la-pencil input-icon"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end col-lg-12 -->
+
+
+                                                            <div class="col-lg-12">
+                                                                <div class="btn-box">
+                                                                    <button class="theme-btn" type="submit">Save Changes</button>
+                                                                </div>
+                                                            </div><!-- end col-lg-12 -->
+                                                        </div><!-- end row -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- end tab-pane-->
+                                <div role="tabpanel" class="tab-pane fade" id="password">
+                                    <div class="user-form padding-bottom-60px">
+                                        <div class="user-profile-action-wrap">
+                                            <h3 class="widget-title font-size-18 padding-bottom-40px">Change Password</h3>
+                                        </div><!-- end user-profile-action-wrap -->
+                                        <div class="contact-form-action">
+                                            <form method="POST" action="https://www.demo.courselms.com/password/reset">
+                                                <input type="hidden" name="_token" value="9e0dR97uuDW9QDYBA1CcNj03GVPUxQiHRVDDCXxg">                                                    <div class="row">
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="input-box">
+                                                            <label class="label-text">E-Mail Address<span class="primary-color-2 ml-1">*</span></label>
+                                                            <div class="form-group">
+                                                                <input id="email" type="email"
+                                                                       class="form-control "
+                                                                       name="email" value="" required
+                                                                       autocomplete="email" autofocus placeholder="Email address">
+
+                                                                <span class="la la-lock input-icon"></span>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col-lg-4 -->
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="input-box">
+                                                            <label class="label-text">New Password<span class="primary-color-2 ml-1">*</span></label>
+                                                            <div class="form-group">
+                                                                <input id="password" type="password"
+                                                                       class="form-control "
+                                                                       name="password" required autocomplete="new-password" placeholder="New password">
+
+                                                                <span class="la la-lock input-icon"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col-lg-4 -->
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="input-box">
+                                                            <label class="label-text">Confirm New Password<span class="primary-color-2 ml-1">*</span></label>
+                                                            <div class="form-group">
+                                                                <input id="password-confirm" type="password" class="form-control"
+                                                                       name="password_confirmation" required autocomplete="new-password" placeholder="Confirm password">
+                                                                <span class="la la-lock input-icon"></span>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col-lg-4 -->
+                                                    <div class="col-lg-12">
+                                                        <div class="btn-box">
+                                                            <button class="theme-btn" type="submit">Change password</button>
+                                                        </div>
+                                                    </div><!-- end col-lg-12 -->
+                                                </div><!-- end row -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="section-block"></div>
+                                    <div class="user-form padding-top-60px">
+                                        <div class="user-profile-action-wrap padding-bottom-20px">
+                                            <h3 class="widget-title font-size-18 padding-bottom-10px">Forgot Password then Recover Password</h3>
+                                            <p class="line-height-26">
+                                                Enter the email of your account to reset password. Then you will receive a link to email
+                                                <br> To reset the password.If you have any issue about reset password
+                                            </p>
+                                        </div><!-- end user-profile-action-wrap -->
+                                        <div class="contact-form-action">
+
+
+                                            <form method="post" action="https://www.demo.courselms.com/password/email">
+                                                <input type="hidden" name="_token" value="9e0dR97uuDW9QDYBA1CcNj03GVPUxQiHRVDDCXxg">                                                    <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="input-box">
+                                                            <label class="label-text">Email Address<span class="primary-color-2 ml-1">*</span></label>
+                                                            <div class="form-group">
+                                                                <input class="form-control " type="email" name="email" value="" placeholder="Enter email address" required autocomplete="email">
+                                                                <span class="la la-lock input-icon"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end col-lg-6 -->
+                                                    <div class="col-lg-12">
+                                                        <div class="btn-box">
+                                                            <button class="theme-btn" type="submit">Recover password</button>
+                                                        </div>
+                                                    </div><!-- end col-lg-12 -->
+                                                </div><!-- end row -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div><!-- end tab-pane-->
+
+                            </div><!-- end tab-content -->
+                        </div><!-- end dashboard-tab-content -->
+                    </div>
+                </div><!-- end card-box-shared -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="copyright-content mt-0 border-top-0 text-center">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="copy__desc">&copy; 2021  Course LMS </a></p>
+                        </div><!-- end col-lg-12 -->
+                    </div><!-- end row -->
+                </div><!-- end copyright-content -->
+            </div><!-- end col-lg-12 -->
+        </div>
+
+    </div><!-- end container-fluid -->
+    </div><!-- end dashboard-content-wrap -->
+    </section><!-- end dashboard-area -->
+    <!-- ================================
+        END DASHBOARD AREA
+    ================================= -->
+    <!-- start scroll top -->
+    <div id="scroll-top">
+        <i class="fa fa-angle-up" title="Go top"></i>
+    </div>
+    <!-- end scroll top -->
+    <!-- template js files -->
+    <script src="https://www.demo.courselms.com/public/frontend/js/jquery.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/popper.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap-select.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/owl.carousel.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/magnific-popup.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/isotope.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/waypoint.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/jquery.counterup.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/particles.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/particlesRun.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/fancybox.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/wow.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/date-time-picker.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/jquery.filer.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/emojionearea.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/smooth-scrolling.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/tooltipster.bundle.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/main.js"></script>
+    <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.js"></script>
+    <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="https://www.demo.courselms.com/public/frontend/js/custom.js"></script>
+    <script src="https://www.demo.courselms.com/public/js/frontend.js"></script>
+    <script src="https://www.demo.courselms.com/public/js/notify.js"></script>
+
+    <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body shadow" id="show-form">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body shadow" id="show-media-form">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Student.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Rumon Prince Sohan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="copyright" content="Course LMS">
+    <meta name="subject" content="Course LMS 3.5">
+    <meta name="description" content="Course LMS">
+    <meta name="author" content="Course LMS">
+
+    <title>Course LMS</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+    <link href="https://www.demo.courselms.com/public/css/font.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/line-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/animate.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/fancybox.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/tooltipster.bundle.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/style.css">
+    <link href="https://www.demo.courselms.com/public/css/frontend.css">
+
+    <!-- end inject -->
+</head>
+
+<body>
+                               
+
+                                    <div class="ml-2"></div>
+
+
+                                    <!-- end logo-right-button -->
+                                    <div class="side-nav-container">
+                                        <div class="humburger-menu">
+                                            <div class="humburger-menu-lines side-menu-close"></div>
+                                            <!-- end humburger-menu-lines -->
+                                        </div><!-- end humburger-menu -->
+
+                                        <div class="side-menu-wrap">
+                                            <ul class="side-menu-ul">
+                                                <li class="sidenav__item">
+                                                    <a href="hcom">Home</a>
+                                                </li>
+
+                                                <li class="sidenav__item">
+                                                    <a href="">Categories</a>
+                                                    <span class="menu-plus-icon"></span>
+                                                    <ul class="side-sub-menu">
+                                                        <li class="sidenav__item">
+                                                            <a href="">education2</a>
+
+                                                            <ul class="side-sub-menu">
+                                                                <li>
+                                                                    <a href="https://www.demo.courselms.com/courses/photography9" class="pl-55">Photography</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="https://www.demo.courselms.com/courses/salman-ahmed" class="pl-55">Salman Ahmed</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="https://www.demo.courselms.com/courses/business3">business3</a>
+
+                                                            <ul class="side-sub-menu">
+                                                                <li>
+                                                                    <a href="https://www.demo.courselms.com/courses/finance-and-banking4" class="pl-55">Finance and Banking</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="https://www.demo.courselms.com/courses/marketing5">marketing5</a>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="https://www.demo.courselms.com/courses/photography6">photography6</a>
+
+                                                            <ul class="side-sub-menu">
+                                                                <li>
+                                                                    <a href="https://www.demo.courselms.com/courses/nature11" class="pl-55">Nature</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="h7">music7</a>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="">mobile-apps-development</a>
+
+                                                            <ul class="side-sub-menu">
+                                                                <li>
+                                                                    <a href="" class="pl-55">Web Development</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="">english-language-ss1</a>
+                                                        </li>
+                                                        <li class="sidenav__item">
+                                                            <a href="">231213123</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="sidenav__item">
+                                                    <a href="">My courses</a>
+                                                </li>
+                                                <li class="sidenav__item">
+                                                    <a href="">Dashboard</a>
+                                                </li>
+                                                <li class="sidenav__item">
+                                                    <a href=""
+                                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+
+                                                    <form id="logout-form" action="" method="POST" class="d-none">
+                                                        <input type="hidden" name="_token" value="1NZJWC6dhCrlf1SBHRePziq5YQxaWq2ns7TTPVON">
+                                                    </form>
+
+                                                </li>
+
+                                            </ul>
+
+                                        </div><!-- end side-menu-wrap -->
+
+                                    </div><!-- end side-nav-container -->
+                                </div><!-- end menu-wrapper -->
+                            </div><!-- end col-lg-9 -->
+                        </div><!-- end row -->
+                    </div>
+                </div><!-- end container-fluid -->
+            </div><!-- end header-menu-content -->
+
+
+
+            <ul class="nav justify-content-center fixed-bottom bg-white btm-fixed-nav d-none">
+                <li class="nav-item">
+                    <div class="notification-item mr-3">
+                        <a href="">
+                            <button class="notification-btn dropdown-toggle">
+                                <i class="la la-shopping-cart"></i>
+                                <span class="quantity cart-quantity">2</span>
+                            </button>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="notification-item mr-3">
+                        <a href="https://www.demo.courselms.com/student/dashboard">
+                            <button class="notification-btn dropdown-toggle">
+                                <i class="la la-bell"></i>
+                                <span class="quantity">1</span>
+                            </button>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="notification-item mr-3">
+                        <a href="">
+                            <button class="notification-btn dropdown-toggle">
+                                <i class="la la-heart-o"></i>
+                                <span class="quantity wishlist-quantity">0</span>
+                            </button>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div><!-- end header-menu-fluid -->
+    </header>
+
+
+    <!-- end header-menu-area -->
+    <!--======================================
+            END HEADER AREA
+    ======================================-->
+    <!-- ================================
+        START BREADCRUMB AREA
+    ================================= -->
+    <section class="breadcrumb-area my-courses-bread">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-content my-courses-bread-content">
+                        <div class="section-heading">
+                            <h2 class="section__title">My courses</h2>
+                        </div>
+                    </div><!-- end breadcrumb-content -->
+                    <div class="my-courses-tab">
+                        <div class="section-tab section-tab-2">
+                            <ul class="nav nav-tabs" role="tablist" id="review">
+                                <li role="presentation" class="padding-r-3">
+                                    <a href="" class="active">
+                                        All Courses
+                                    </a>
+                                </li>
+
+                                <li role="presentation" class="padding-r-3">
+                                    <a href="">
+                                        Wishlist
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end breadcrumb-area -->
+    <!-- ================================
+        END BREADCRUMB AREA
+    ================================= -->
+    <!-- ================================
+        START FLASH MESSAGE
+    ================================= -->
+    <!-- ================================
+        END FLASH MESSAGE
+    ================================= -->
+    <!-- ================================
+           START MY COURSES
+    ================================= -->
+    <section class="my-courses-area padding-top-30px padding-bottom-90px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="my-course-content-wrap">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active show" id="#all-course">
+                                <div class="my-course-content-body">
+                                    <div class="my-course-container">
+                                        <div class="row">
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href=""
+                                                           class="card__img">
+                                                            <img src="~/Content/images/finance.jpg"
+                                                                 alt="Wordpress For Beginner">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="">Finance Management</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="">nitesh</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 100%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    100
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/wordpress-for-beginner"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/wordpress-for-beginner"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href="https://www.demo.courselms.com/lesson/the-complete-android-n-developer-course"
+                                                           class="card__img">
+                                                            <img src="~/Content/images/Digital-Marketing.jpg"
+                                                                 alt="The Complete Android N Developer Course">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="">Digital Marketing</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="https://www.demo.courselms.com/instructor/details/rumon">Rumon</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 0%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    0
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/the-complete-android-n-developer-course"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/the-complete-android-n-developer-course"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href="https://www.demo.courselms.com/lesson/outcome-based-education-obe-and-academic-quality-assurance"
+                                                           class="card__img">
+                                                            <img src="~/Content/images/adobe photoshop.png"
+                                                                 alt="Outcome Based Education">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="">adobe Photoshop</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="https://www.demo.courselms.com/instructor/details/Shohanur">Shohanur Rahman Akash</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 100%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    100
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/outcome-based-education-obe-and-academic-quality-assurance"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/outcome-based-education-obe-and-academic-quality-assurance"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href="https://www.demo.courselms.com/lesson/microsoft-sql-server-2019-for-everyone"
+                                                           class="card__img">
+                                                            <img src="~/Content/images/ethical hacking.jpg"
+                                                                 alt="Microsoft SQL Server 2019 for Everyone">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="https://www.demo.courselms.com/course/microsoft-sql-server-2019-for-everyone">Ethical Hacking</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="https://www.demo.courselms.com/instructor/details/Shohanur">nitesh</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 100%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    100
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/microsoft-sql-server-2019-for-everyone"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/microsoft-sql-server-2019-for-everyone"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href="https://www.demo.courselms.com/lesson/advance-wordpress"
+                                                           class="card__img">
+                                                            <img src="~/Content/images/data science.jpg"
+                                                                 alt="Advance Wordpress">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="">data science</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="https://www.demo.courselms.com/instructor/details/Shohanur">nitesh</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 100%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    100
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/advance-wordpress"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/advance-wordpress"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                            <div class="col-lg-4 column-td-half">
+                                                <div class="card-item">
+                                                    <div class="card-image">
+                                                        <a href="https://www.demo.courselms.com/lesson/flutter-and-dart-the-complete-guide"
+                                                           class="card__img">
+                                                            <img src="https://www.demo.courselms.com/public//uploads/media_manager/19.jpg"
+                                                                 alt="Flutter &amp; Dart - The Complete Guide">
+                                                        </a>
+                                                    </div><!-- end card-image -->
+                                                    <div class="card-content p-4">
+                                                        <h3 class="card__title mt-0">
+                                                            <a href="https://www.demo.courselms.com/course/flutter-and-dart-the-complete-guide">Flutter &amp; Dart - The Complete Guide</a>
+                                                        </h3>
+                                                        <p class="card__author">
+                                                            <a href="https://www.demo.courselms.com/instructor/details/rumon">Rumon</a>
+                                                        </p>
+                                                        <div class="course-complete-bar-2 mt-2">
+                                                            <div class="progress-item mb-0">
+                                                                <p class="skillbar-title">Complete:</p>
+                                                                <div class="skillbar-box mt-1">
+                                                                    <div class="skillbar">
+                                                                        <div class="skillbar-bar skillbar-bar-1"
+                                                                             style="width: 0%;"></div>
+                                                                    </div> <!-- End Skill Bar -->
+                                                                </div>
+                                                                <div class="skill-bar-percent">
+                                                                    0
+                                                                    %
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- end course-complete-bar-2 -->
+                                                        <div class="text-center mt-3">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/course/flutter-and-dart-the-complete-guide"
+                                                                       class="btn btn-outline-success mt-2">Course details</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="https://www.demo.courselms.com/lesson/flutter-and-dart-the-complete-guide"
+                                                                       class="btn btn-success mt-2">Start lesson</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- end card-content -->
+                                                </div><!-- end card-item -->
+                                            </div><!-- end col-lg-4 -->
+                                        </div>
+                                    </div>
+                                    <div class="page-navigation-wrap mt-4 text-center">
+                                        <div class="row w-100">
+                                            <div class="col-lg-12">
+                                                <div class="page-navigation-wrap mt-5">
+                                                    <div class="page-navigation w-100 text-center">
+                                                        <ul class="page-navigation-nav m-auto">
+
+                                                            <li class="disabled" aria-disabled="true" aria-label="pagination.previous">
+                                                                <a href="#" class="page-go page-prev">
+                                                                    <i class="la la-arrow-left"></i>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+                                                            <li class="active"><a href="#" class="page-go-link ">1</a></li>
+                                                            <li><a href="https://www.demo.courselms.com/my/courses?page=2" class="page-go-link">2</a></li>
+
+
+                                                            <li>
+                                                                <a href="https://www.demo.courselms.com/my/courses?page=2" aria-label="pagination.next"
+                                                                   class="page-go page-next">
+                                                                    <i class="la la-arrow-right"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div><!-- end page-navigation-wrap -->
+                                            </div><!-- end col-lg-12 -->
+                                        </div>
+
+                                    </div><!-- end page-navigation-wrap -->
+                                </div>
+                            </div><!-- end tab-pane -->
+
+                            <div role="tabpanel" class="tab-pane fade" id="#wishlist">
+                                <div class="my-wishlist-wrap">
+                                    <div class="my-wishlist-card-body padding-top-35px">
+                                        <div class="row">
+
+                                        </div><!-- end row -->
+                                    </div>
+
+                                </div><!-- end my-wishlist-wrap -->
+                            </div><!-- end tab-pane -->
+
+                        </div>
+                    </div>
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end my-courses-area -->
+    <!-- ================================
+           START MY COURSES
+    ================================= -->
+   
+     
+</body>
+
+</html>

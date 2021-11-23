@@ -1,0 +1,1758 @@
+﻿
+@{
+    ViewBag.Title = "AllCourse";
+    Layout = "~/Views/Shared/_Instructor.cshtml";
+}
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="csrf-token" content="It5tkqKymT3xVIuU4kvxSx73MuR8FfQWwDa6hwlB">
+
+    <meta name="keywords"
+          content="Course LMS">
+
+    <meta name="description" content="Course LMS">
+
+    <meta name="author" content="Course LMS">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <meta name="copyright" content="Course LMS">
+
+    <meta name="subject" content="Course LMS 3.5">
+
+    <title>Course LMS - Course Index</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+
+    <!-- Start css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Apex css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+
+    <!-- Summernote css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.css" rel="stylesheet">
+
+    <!-- Start css -->
+    <!-- Switchery css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <!-- Slick css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/css/dropify.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/asset_rumbok/css/icofont.css">
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- Datepicker css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/datepicker/datepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- Summernote css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.css" rel="stylesheet">
+
+    <!-- Code Mirror css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/code-mirror/codemirror.css" rel="stylesheet">
+
+    <!-- dropzone -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- Select2 css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css">
+
+    <!-- Tagsinput css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css" rel="stylesheet" type="text/css">
+
+    <!-- touchspin -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css">
+
+    <!-- X-editable css -->
+
+    <link href="https://www.demo.courselms.com/public/assets/plugins/bootstrap-xeditable/css/bootstrap-editable.css" rel="stylesheet" type="text/css">
+
+
+
+    <!-- https://www.demo.courselms.com/public/project_assets -->
+
+
+
+    <link href="https://www.demo.courselms.com/public/assets/css/icons.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/flag-icon.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://www.demo.courselms.com/public/assets/css/custom.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/css/video-js.css">
+
+    <!-- End css -->
+
+    <link rel="stylesheet" type="text/css" href="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/css/notify.css" />
+
+
+
+
+
+
+
+</head>
+
+<body style="margin-left:15%">
+
+
+
+
+
+    <!-- Start Containerbar -->
+
+    <div id="containerbar">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="contentbar">
+
+
+
+            <!-- BEGIN:content -->
+
+            <div class="card m-b-30">
+
+                <div class="row px-3 pt-3">
+
+                    <h3 class="col-md-6">
+
+                        All Courses
+
+                    </h3>
+
+                    <div class="col-md-6">
+
+                        <form method="get" action="">
+
+                            <div class="input-group">
+
+                                <input type="text" name="search" class="form-control"
+                                       placeholder="Search Courses" value="">
+
+                                <div class="input-group-append">
+
+                                    <button class="btn btn-primary" type="submit">
+
+                                        Search
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="table-responsive">
+
+                        <table class="table foo-filtering-table text-center">
+
+                            <thead class="text-center">
+
+                                <tr class="footable-header">
+
+                                    <th data-breakpoints="xs" class="footable-first-visible">
+
+                                        S/L
+
+                                    </th>
+
+                                    <th>
+
+                                        Title
+
+                                    </th>
+
+                                    <th>
+
+                                        Category
+
+                                    </th>
+
+                                    <th data-breakpoints="xs">
+
+                                        Info
+
+                                    </th>
+
+                                    <th data-breakpoints="xs">
+
+                                        Enrolled Students
+
+                                    </th>
+
+                                    <th>Action</th>
+
+
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        1
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.youtube.com/embed/tgbNymZ7vqY">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/Kx9x37vpM42whMPQAUp61e21EWiJFCOWLknn3meo.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Digital finance Marketing Course</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>Free</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Finance and Banking</span></td>
+
+                                    <td>
+
+                                        Classes- 18
+
+                                        <input type="hidden" value="3" />
+
+                                        <input type="hidden" value="5" />
+
+                                        <input type="hidden" value="6" />
+
+                                        <input type="hidden" value="7" />
+
+                                        <input type="hidden" value="8" />
+
+                                        <input type="hidden" value="8" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="9" />
+
+                                        <input type="hidden" value="11" />
+
+                                        <input type="hidden" value="11" />
+
+                                        <input type="hidden" value="11" />
+
+                                        <input type="hidden" value="11" />
+
+                                        <br>
+
+                                        Contents- 11
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/22/digital-finance-marketing-course">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/22/digital-finance-marketing-course">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        2
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/21/microsoft-sql-server-2019-for-everyone">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/DlolL30aMOQmC81xNCDfmnjdSL4OuZqsIlS4Hm7s.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Microsoft SQL Server 2019 for Everyone</h5>
+
+                                                            <p class="text-secondary">All Levels</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>20.00$</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Business</span></td>
+
+                                    <td>
+
+                                        Classes- 4
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <br>
+
+                                        Contents- 3
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/21/microsoft-sql-server-2019-for-everyone">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/21/microsoft-sql-server-2019-for-everyone">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        3
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/20/the-complete-digital-finance-marketing-course">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/W3il4ig1WwQ8Cpn4QnVM0U8uHp9qVYLAJtjCu3GO.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">The Complete Digital finance Marketing Course</h5>
+
+                                                            <p class="text-secondary">Advanced</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>20.00$</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Marketing</span></td>
+
+                                    <td>
+
+                                        Classes- 2
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <br>
+
+                                        Contents- 3
+
+                                    </td>
+
+                                    <td>0 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/20/the-complete-digital-finance-marketing-course">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/20/the-complete-digital-finance-marketing-course">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        4
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/19/outcome-based-education-obe-and-academic-quality-assurance">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/EOcKJ945IWhaeDE2MJCrWgUkMaj1nWL4UwUlfxRz.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Outcome Based Education</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>20.00$</span>
+
+                                                                <span> <del> 50.00$ </del> </span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Education</span></td>
+
+                                    <td>
+
+                                        Classes- 2
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <br>
+
+                                        Contents- 3
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/19/outcome-based-education-obe-and-academic-quality-assurance">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/19/outcome-based-education-obe-and-academic-quality-assurance">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        5
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/11/the-complete-financial-analyst-course-2020">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/cJND1JsRLhOOEONLmLK3QTgAs53m23xZeOZsEPB3.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">The Complete Financial Analyst Course 2020</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>20.00$</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Finance and Banking</span></td>
+
+                                    <td>
+
+                                        Classes- 2
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="4" />
+
+                                        <br>
+
+                                        Contents- 4
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/11/the-complete-financial-analyst-course-2020">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/11/the-complete-financial-analyst-course-2020">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        6
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/1/wordpress-for-beginner">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/xdB5bQTHb3tXlrS58aoreimgMuTgE2lvrBkCCtMR.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Wordpress For Beginner</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>Free</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Web Development</span></td>
+
+                                    <td>
+
+                                        Classes- 4
+
+                                        <input type="hidden" value="3" />
+
+                                        <input type="hidden" value="5" />
+
+                                        <input type="hidden" value="6" />
+
+                                        <input type="hidden" value="7" />
+
+                                        <br>
+
+                                        Contents- 7
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/1/wordpress-for-beginner">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/1/wordpress-for-beginner">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        7
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/2/python-for-beginners-basics-to-advanced-python-development">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/aB1WlGyFMa8LFRiBAZxtYcFwROmLe04mco9GSozl.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Python for Beginners - Basics to Advanced Python</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>5.00$</span>
+
+                                                                <span> <del> 20.00$ </del> </span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Web Development</span></td>
+
+                                    <td>
+
+                                        Classes- 2
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="4" />
+
+                                        <br>
+
+                                        Contents- 4
+
+                                    </td>
+
+                                    <td>0 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/2/python-for-beginners-basics-to-advanced-python-development">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/2/python-for-beginners-basics-to-advanced-python-development">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        8
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/5/learn-photography">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/hEiI5UjOI8DTYAgnBp3v0bkf7OhNwD9b2ySz4KnX.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Learn Photography</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>Free</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Photography</span></td>
+
+                                    <td>
+
+                                        Classes- 2
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="4" />
+
+                                        <br>
+
+                                        Contents- 4
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/5/learn-photography">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/5/learn-photography">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        9
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/6/advance-wordpress">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/dqsdqNqvQGmiPahTsQmAWWcy0IKs01YipDi2r463.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Advance Wordpress</h5>
+
+                                                            <p class="text-secondary">Advanced</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>Free</span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Web Development</span></td>
+
+                                    <td>
+
+                                        Classes- 3
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="4" />
+
+                                        <input type="hidden" value="4" />
+
+                                        <br>
+
+                                        Contents- 4
+
+                                    </td>
+
+                                    <td>1 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/6/advance-wordpress">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/6/advance-wordpress">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="footable-first-visible">
+
+                                        10
+
+                                    </td>
+
+                                    <td class="w-45 text-left">
+
+                                        <a href="https://www.demo.courselms.com/dashboard/course/index/9/learn-how-to-play-guitar">
+
+                                            <div class="card">
+
+                                                <div class="row no-gutters">
+
+                                                    <div class="col-md-4 overflow-auto my-auto">
+
+                                                        <img src="https://www.demo.courselms.com/public/uploads/course/DBP1Nj0oBdMDEy4wnUpG1DVVpRTChH1jESjBNTqd.jpeg" class="card-img avatar-xl"
+                                                             alt="Card image">
+
+                                                    </div>
+
+                                                    <div class="col-md-8">
+
+                                                        <div class="card-body">
+
+                                                            <h5 class="card-title font-16">Learn how to play guitar</h5>
+
+                                                            <p class="text-secondary">Beginner</p>
+
+                                                            <p class="card-text">Shohanur Rahman Akash</p>
+
+                                                            <div class="d-flex justify-content-between">
+
+                                                                <span class="badge badge-success p-2">Published</span>
+
+                                                                <span>10.00$</span>
+
+                                                                <span> <del> 30.00$ </del> </span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </a>
+
+                                    </td>
+
+                                    <td><span class="badge badge-info">Music</span></td>
+
+                                    <td>
+
+                                        Classes- 3
+
+                                        <input type="hidden" value="1" />
+
+                                        <input type="hidden" value="2" />
+
+                                        <input type="hidden" value="3" />
+
+                                        <br>
+
+                                        Contents- 3
+
+                                    </td>
+
+                                    <td>0 </td>
+
+
+
+                                    <td>
+
+                                        <div class="dropdown">
+
+                                            <button class="btn btn-link p-0 font-18 float-right" type="button"
+                                                    id="widgetRevenue" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+
+                                                <i class="feather icon-more-horizontal-"></i>
+
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu-right st-drop"
+                                                 aria-labelledby="widgetRevenue" x-placement="bottom-end">
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/index/9/learn-how-to-play-guitar">
+
+                                                    Details
+
+                                                </a>
+
+                                                <a class="dropdown-item font-13"
+                                                   href="https://www.demo.courselms.com/dashboard/course/edit/9/learn-how-to-play-guitar">
+
+                                                    Edit
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                            <div class="float-left">
+
+
+
+                            </div>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END:content -->
+
+
+
+        </div>
+
+        <!-- End Contentbar -->
+        <!-- Start Footerbar -->
+
+        <div class="footerbar">
+
+            <footer class="footer">
+
+                <p class="mb-0">© 2020 Course LMS v3.5</p>
+
+            </footer>
+
+        </div>
+
+        <!-- End Footerbar -->
+        <!--Modal or Delete Modal-->
+
+        <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="title">New message</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body shadow" id="show-media-form">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+    "use strict"
+
+    function confirm_modal(delete_url) {
+
+        jQuery('#confirm-delete').modal('show', {backdrop: 'static'});
+
+        document.getElementById('delete_link').setAttribute('href', delete_url);
+
+    }
+
+        </script>
+
+
+
+
+
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="myModalLabel">Confirmation</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>Delete confirmation message</p>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+                        <a id="delete_link" type="submit" class="btn btn-danger">Delete</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div id="mySidenav" class="sidenav shadow rounded">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div id="master_media_section"></div>
+
+        </div>
+
+
+
+        <input type="hidden" value="https://demo.courselms.com" id="domain_name">
+
+
+
+    </div>
+
+    <!-- End Rightbar -->
+    </div>
+
+    <!-- End Containerbar -->
+    <!-- Start js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/popper.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/bootstrap.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/modernizr.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/detect.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/jquery.slimscroll.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/vertical-menu.js"></script>
+
+    <!-- Switchery js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/switchery/switchery.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-switchery.js"></script>
+
+    <!-- Apex js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/apexcharts.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/apexcharts/irregular-data-series.js"></script>
+
+    <!-- Chart js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/chart.js/chart-bundle.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-chart-chartjs.js"></script>
+
+    <!-- Slick js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/slick/slick.js"></script>
+
+    <!-- Select2 js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/select2/select2.js"></script>
+
+    <!-- Summernote JS -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/summernote/summernote-bs4.js"></script>
+
+
+
+    <!-- Pnotify js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-pnotify.js"></script>
+
+
+
+
+
+
+
+
+
+    <!-- Custom Dashboard js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/custom/custom-dashboard.js"></script>
+
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/videojs-ie8.min.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/video.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/js/dropify.js"></script>
+
+    <!-- Core js -->
+
+    <script src="https://www.demo.courselms.com/public/assets/js/core.js"></script>
+
+    <script src="https://www.demo.courselms.com/public/assets/js/script.js"></script>
+
+
+
+
+
+    <!-- End js -->
+
+
+
+    <script>
+
+
+
+    var notify = {
+
+        timeout: "5000",
+
+        animatedIn: "bounceInRight",
+
+        animatedOut: "bounceOutRight",
+
+        position: "top-right"
+
+    }
+
+
+
+    </script>
+
+
+
+    <script type="text/javascript" src="https://www.demo.courselms.com/public/vendor/mckenziearts/laravel-notify/js/notify.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+
+
+            "use strict"
+
+
+
+        try {
+
+            $.post('https://www.demo.courselms.com/dashboard/media/manager/slide', {_token:'It5tkqKymT3xVIuU4kvxSx73MuR8FfQWwDa6hwlB'}, function(data){
+
+                $('#master_media_section').html(data);
+
+            });
+
+        } catch (error) {
+
+            location.reload();
+
+        }
+
+
+
+
+
+        });
+
+
+
+        $('.dropify').dropify();
+
+
+
+        $('#datetimepicker1').datetimepicker();
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+

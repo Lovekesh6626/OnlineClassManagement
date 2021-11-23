@@ -1,0 +1,788 @@
+﻿
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Shared/_Student.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="https://www.demo.courselms.com/public/uploads/site/icon.png">
+    <link href="https://www.demo.courselms.com/public/css/font.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/line-awesome.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/animate.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.carousel.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/bootstrap-select.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.css">
+
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/fancybox.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/tooltipster.bundle.css">
+    <link rel="stylesheet" href="https://www.demo.courselms.com/public/frontend/css/style.css">
+    <link href="https://www.demo.courselms.com/public/css/frontend.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- end inject -->
+</head>
+
+<body>
+
+    <div class="dashboard-sidebar" style="height:200px;z-index:500">
+
+
+        <div class="dashboard-nav-container" style="background: #343A40; color: white; margin-bottom: 20px; padding: 50px">
+            <h2 style="color:white">LearninGO </h2>
+
+            <div class="humburger-menu">
+
+
+                <div class="side-menu-wrap" style="background:#343A40; margin-top:100px; width:300px; margin-left:-51px; ">
+                    <ul class="side-menu-ul" style="padding:-18px">
+
+                        <li class="sidenav__item page-active" style="padding:20px;">
+                            <a href="/Student/MyProfile" style="font-size:20px"><i class="glyphicon glyphicon-user"></i>My Profile</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Message" style="color:white;font-size:20px"><i class="glyphicon glyphicon-envelope"></i>Message</a>
+                        </li>
+                        <li class="sidenav__item " style="padding:20px;">
+                            <a href="/Student/Notification" style="color:white;font-size:20px"><i class="glyphicon glyphicon-bell"></i>Notfications</a>
+                        </li>
+
+                        <li class="sidenav__item" style="padding:20px;">
+                            <a href="/Home/Index" style="color:white;font-size:20px">
+                                <i class="glyphicon glyphicon-log-out"></i>Logout
+                            </a>
+
+                        </li>
+                    </ul>
+
+
+                </div>
+                <!-- end side-menu-wrap -->
+            </div>
+        </div><!-- end dashboard-sidebar -->
+
+
+
+
+        <section class="dashboard-area">
+
+
+
+            <div class="dashboard-content-wrap">
+                <div class="container-fluid">
+
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="card-box-shared">
+                                <div class="card-box-shared-title">
+                                    <h3 class="widget-title">Message</h3>
+                                </div>
+                                <div class="card-box-shared-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">rohit kumar</h4>
+                                                                    <span class="time color-text font-size-12">Wordpress For Beginner</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">hola</p>
+                                                                            <span class="time">11:49</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-reply">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">Como estas</p>
+                                                                            <span class="time">11:52</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">asdqwehammamn</p>
+                                                                            <span class="time">07:39</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-reply">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">fdhgfdhfgh</p>
+                                                                            <span class="time">03:57</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">test</p>
+                                                                            <span class="time">11:08</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">kkjkljl</p>
+                                                                            <span class="time">06:52</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">jhgjhkgjhgj</p>
+                                                                            <span class="time">06:53</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">jhgjgjhgjg</p>
+                                                                            <span class="time">06:53</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-reply">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">kghj</p>
+                                                                            <span class="time">06:24</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="9">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/ZguHDula9P98arVGlSHNKhsp1SMZLaXFSfE6VmKj.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">Rumon</h4>
+                                                                    <span class="time color-text font-size-12">The Complete Android N Developer Course</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">hello !!!</p>
+                                                                            <span class="time">11:01</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">fdhgf</p>
+                                                                            <span class="time">04:02</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">das</p>
+                                                                            <span class="time">08:20</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">why is this course so so</p>
+                                                                            <span class="time">08:07</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">erer</p>
+                                                                            <span class="time">11:04</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">n,jh</p>
+                                                                            <span class="time">06:47</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="10">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">Shohanur Rahman Akash</h4>
+                                                                    <span class="time color-text font-size-12">Outcome Based Education</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">5</p>
+                                                                            <span class="time">08:21</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="11">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">Shohanur Rahman Akash</h4>
+                                                                    <span class="time color-text font-size-12">Microsoft SQL Server 2019 for Everyone</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">hallow word demo</p>
+                                                                            <span class="time">05:14</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="12">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/ZguHDula9P98arVGlSHNKhsp1SMZLaXFSfE6VmKj.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">Rumon</h4>
+                                                                    <span class="time color-text font-size-12">Flutter &amp; Dart - The Complete Guide</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">as</p>
+                                                                            <span class="time">07:18</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">Руеыаим</p>
+                                                                            <span class="time">06:36</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="14">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="dashboard-message-wrapper d-flex">
+                                                <div class="message-content flex-grow-1">
+                                                    <div class="message-header">
+                                                        <div class="mess__item justify-content-between align-items-center">
+                                                            <div class="d-flex">
+                                                                <div class="avatar">
+                                                                    <img src="https://www.demo.courselms.com/public/uploads/instructor/1YRauZ3XoItxFYjjY1S4W3OOR4zYrtxvrTJNYbqG.jpg"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="widget-title font-size-15 mb-0">Shohanur Rahman Akash</h4>
+                                                                    <span class="time color-text font-size-12">Digital finance Marketing Course</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- mess__item -->
+                                                    </div><!-- message-header -->
+                                                    <div class="conversation-wrap">
+                                                        <div class="conversation-box">
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">hello test</p>
+                                                                            <span class="time">03:33</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">fgdgfd</p>
+                                                                            <span class="time">01:23</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                            <div class="conversation-item msg-sent">
+                                                                <div class="mess__body">
+                                                                    <div class="mess__item">
+                                                                        <div class="avatar">
+                                                                            <!--avatar dot-status online-status-->
+                                                                            <img src="https://www.demo.courselms.com/public/uploads/student/OQNMONDFNQzBOIseue0tHlobmPREO2WgUJrAOvdi.png"
+                                                                                 alt="Michelle Moreno">
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <p class="text">Im stuck</p>
+                                                                            <span class="time">07:23</span>
+                                                                        </div>
+                                                                    </div><!-- mess__item -->
+                                                                </div><!-- mess__body -->
+                                                            </div><!-- conversation-item -->
+                                                        </div><!-- conversation-box -->
+                                                    </div><!-- conversation-wrap -->
+                                                    <div class="message-reply-input">
+                                                        <div class="contact-form-action">
+                                                            <form action="https://www.demo.courselms.com/message/send" method="post">
+                                                                <input type="hidden" name="_token" value="CKqwGWbFSjkebXGxzCHTE2ORr4jOSSiwufYpizGy">                                                                <input type="hidden" name="enroll_id"
+                                                                                                                                                                                                                           value="15">
+                                                                <input type="hidden" name="user_id"
+                                                                       value="19">
+                                                                <div class="input-box d-flex align-items-center">
+                                                                    <div class="form-group flex-grow-1 mb-0">
+                                                                        <textarea class="message-control form-control mr-2"
+                                                                                  name="message"
+                                                                                  placeholder="Type a message"></textarea>
+                                                                        <button type="submit"
+                                                                                class="theme-btn submit-btn border-0">
+                                                                            <span class="la la-paper-plane"></span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- input-box -->
+                                                            </form>
+                                                        </div><!-- end contact-form-action -->
+                                                    </div><!-- message-reply-input -->
+                                                </div><!-- message-content -->
+                                            </div><!-- end dashboard-message-wrapper -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col-lg-12 -->
+                    </div><!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright-content mt-0 border-top-0 text-center">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p class="copy__desc">&copy; 2021  Course LMS </a></p>
+                                    </div><!-- end col-lg-12 -->
+                                </div><!-- end row -->
+                            </div><!-- end copyright-content -->
+                        </div><!-- end col-lg-12 -->
+                    </div>
+
+                </div><!-- end container-fluid -->
+            </div><!-- end dashboard-content-wrap -->
+
+        </section><!-- end dashboard-area -->
+        <!-- ================================
+            END DASHBOARD AREA
+        ================================= -->
+        <!-- start scroll top -->
+        <div id="scroll-top">
+            <i class="fa fa-angle-up" title="Go top"></i>
+        </div>
+        <!-- end scroll top -->
+        <!-- template js files -->
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/popper.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/bootstrap-select.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/owl.carousel.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/magnific-popup.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/isotope.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/waypoint.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.counterup.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/particles.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/particlesRun.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/fancybox.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/wow.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/date-time-picker.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/jquery.filer.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/emojionearea.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/smooth-scrolling.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/tooltipster.bundle.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/main.js"></script>
+        <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/dataTables.bootstrap4.js"></script>
+        <script src="https://www.demo.courselms.com/public/assets/plugins/datatables/jquery.dataTables.js"></script>
+        <script src="https://www.demo.courselms.com/public/frontend/js/custom.js"></script>
+        <script src="https://www.demo.courselms.com/public/js/frontend.js"></script>
+        <script src="https://www.demo.courselms.com/public/js/notify.js"></script>
+
+        <div class="modal fade " id="show-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body shadow" id="show-form">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade custom-modal" id="show-media-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body shadow" id="show-media-form">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
+

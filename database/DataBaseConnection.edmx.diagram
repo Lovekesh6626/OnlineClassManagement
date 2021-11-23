@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6deb525225a8455e8b35a9e95549fb7e" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="learnwithniteshsirModel.Account" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.Category" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.coursecontent" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.CreateCourse" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.InstructorProfile" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.LoginAccess" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.Message" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.Roles" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.SocialMedia" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.StudentCart" Width="1.5" PointX="10.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.StudentProfile" Width="1.5" PointX="5.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="learnwithniteshsirModel.Content" Width="1.5" PointX="7.5" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__Account__Role__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__CreateCou__Instr__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__Instructo__Instr__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__Message__Instruc__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__Message__Student__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__SocialMedia__Id__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__StudentCa__Stude__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__StudentProfi__Id__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__CreateCou__Categ__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__coursecon__conte__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__Content__CourseI__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="learnwithniteshsirModel.FK__StudentCa__Cours__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

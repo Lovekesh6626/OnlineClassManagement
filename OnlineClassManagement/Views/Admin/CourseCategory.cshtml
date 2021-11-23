@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "CourseCategory";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        margin: 20px;
+        width: 200px;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+    .text {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 80px;
+        margin-left: 33px;
+    }
+
+    .button {
+        border-radius: 8px;
+    }
+
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: black;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 10px;
+        width: 100%;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        vertical-align: middle;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+</style>
+
+
+<body style="margin-top:50px;">
+
+    <h2 style="text-align:center">Course Category</h2>
+
+    <div style="display:flex;">
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Photoshop</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Video Lecture</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Dotnet</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Java</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+    </div>
+
+    <div style="display:flex;">
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+        <div class="card">
+            <img src="~/Content/Images/adobe.jpg" alt="Denim Jeans" style="width:100%">
+            <h3>Adobe Course</h3>
+            <p><button class="button">View All</button></p>
+        </div>
+    </div>
+
+    <button class="button"><span><a href="/Admin/AddCourseCategory">New Category </a> </span></button>
+</body>
+
+
+
